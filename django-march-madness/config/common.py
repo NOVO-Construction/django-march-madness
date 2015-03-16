@@ -108,16 +108,7 @@ class Common(Configuration):
 
     # ######### DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.',
-            'NAME': '',
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': '',
-        }
-    }
+    DATABASES = values.DatabaseURLValue('sqlite:///%s' % os.path.join(BASE_DIR, 'db.sqlite3'), environ=True)
     # ######### END DATABASE CONFIGURATION
 
     # CACHING
