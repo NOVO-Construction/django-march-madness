@@ -49,7 +49,7 @@ def push():
         with cd("%(deploy_base)s" % env):
             run("git pull origin %(branch)s" % env)
         deploy_requirements()
-        managepy('syncdb --migrate')
+        managepy('migrate')
         reload_gunicorn()
 
 

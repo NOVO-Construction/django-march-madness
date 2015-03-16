@@ -18,7 +18,7 @@ class Local(Common):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'djagno-march-madness',
+            'NAME': 'madness_dev',
             'USER': 'root',
             'PASSWORD': '',
             'HOST': '127.0.0.1',

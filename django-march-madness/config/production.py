@@ -64,6 +64,19 @@ class Production(Common):
     EMAIL_USE_TLS = True
     # END EMAIL
 
+    # ######### DATABASE CONFIGURATION
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'madness',
+            'USER': values.SecretValue(environ_prefix="", environ_name='MYSQL_USER'),
+            'PASSWORD': values.SecretValue(environ_prefix="", environ_name='MYSQL_PASSWORD'),
+            'HOST': values.SecretValue(environ_prefix="", environ_name='MYSQL_HOST'),
+            'PORT': '3306',
+        }
+    }
+    # ######### END DATABASE CONFIGURATION
+
     # TEMPLATE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
     TEMPLATE_LOADERS = (
