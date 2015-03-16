@@ -49,7 +49,7 @@ def push():
         with cd("%(deploy_base)s" % env):
             run("git pull origin %(branch)s" % env)
         deploy_requirements()
-        managepy('migrate')
+        # managepy('migrate')
         managepy('collectstatic --noinput --clear')
         reload_gunicorn()
 
