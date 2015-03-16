@@ -94,4 +94,37 @@ class Production(Common):
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
     # ######### END STATICFILES_STORAGE CONFIGURATION
 
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'handlers': {
+            'mail_admins': {
+                'class': 'django.utils.log.AdminEmailHandler',
+                'level': 'ERROR',
+                'include_html': True,
+            },
+            'logfile': {
+                'class': 'logging.handlers.WatchedFileHandler',
+                'filename': '/home/ec2-user/madness.log'
+            },
+        },
+        'loggers': {
+            'django.request': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django': {
+                'handlers': ['logfile'],
+                'level': 'ERROR',
+                'propagate': False,
+            },
+            'django-march-madness': {
+                'handlers': ['logfile'],
+                'level': 'INFO',
+                'propagate': False
+            },
+        },
+    }
+
     # Your production stuff: Below this line define 3rd party library settings
