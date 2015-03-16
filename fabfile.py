@@ -23,7 +23,7 @@ def install_software():
 
 
 def managepy(cmd):
-    manage = join(env.deploy_base, 'sentinel', 'manage.py')
+    manage = join(env.deploy_base, 'django-march-madness', 'manage.py')
     run('%s %s %s' % (env.python, manage, cmd))
 
 
@@ -47,3 +47,26 @@ def push():
     managepy('migrate')
     clean_pyc()
     reload_gunicorn()
+
+
+def deploy_supervisor():
+    with cd("/etc"):
+        sudo("rm -rf /etc/supervisord.conf")
+        sudo("rm -rf /etc/init.d/supervisord")
+        put("%(local_root_path)s/config_files/supervisord.conf" % env, "/etc/supervisord.conf", use_sudo=True)
+        put("%(local_root_path)s/bin/initscripts/supervisord" % env, "/etc/init.d/supervisord", use_sudo=True)
+    sudo("chmod 755 /etc/init.d/supervisord")
+    sudo("chkconfig --add supervisord")
+    sudo("chkconfig supervisord on")
+    sudo("supervisorctl reread")
+    sudo("supervisorctl update")
+
+
+def deploy_nginx():
+    sudo("rm -rf /etc/nginx/nginx.conf")
+    put("%(local_root_path)s/config_files/nginx.conf" % env, "/etc/nginx/nginx.conf", use_sudo=True)
+    sudo("rm -rf /etc/nginx/mime.types")
+    put("%(local_root_path)s/config_files/nginx-mime.types" % env, "/etc/nginx/mime.types", use_sudo=True)
+    # Fix permissions SEE: http://stackoverflow.com/questions/10557927/server-response-gets-cut-off-half-way-through
+    sudo("chown -R ec2-user:ec2-user /var/lib/nginx/")
+    sudo("service nginx restart")
