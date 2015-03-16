@@ -1,0 +1,1199 @@
+{% extends "__base.html" %}
+
+{% block title %}Bracket Selection{% endblock %}
+
+{% block content %}
+<div class="container-fluid" data-reactid=".0.1">
+    <div data-reactid=".0.1.0">
+      <div class="three-columns bracket-header" data-reactid=".0.1.0.0">
+        <div class="affix-top" data-reactid=".0.1.0.0.0">
+          <div class="bracket-nav btn-toolbar" data-reactid=".0.1.0.0.0.0">
+            <div class="btn-group" data-reactid=".0.1.0.0.0.0.$0">
+              <button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$0.0" disabled="true" type="button"><span class="glyphicon glyphicon-fast-backward" data-reactid=
+              ".0.1.0.0.0.0.$0.0.0"></span></button><button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$0.1" disabled="true" type="button"><span class="glyphicon glyphicon-step-backward"
+              data-reactid=".0.1.0.0.0.0.$0.1.0"></span></button><button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$0.2" disabled type="button"><span class="glyphicon glyphicon-step-forward"
+              data-reactid=".0.1.0.0.0.0.$0.2.0"></span></button><button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$0.3" disabled type="button"><span class="glyphicon glyphicon-fast-forward"
+              data-reactid=".0.1.0.0.0.0.$0.3.0"></span></button>
+            </div>
+
+            <div class="btn-group" data-reactid=".0.1.0.0.0.0.$1">
+              <button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$1.0" disabled="true" type="button"><span class="glyphicon glyphicon-ban-circle" data-reactid=
+              ".0.1.0.0.0.0.$1.0.0"></span></button><button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$1.1" type="button">1</button><button class="btn btn-default" data-reactid=
+              ".0.1.0.0.0.0.$1.2" type="button">16</button><button class="btn btn-default" data-reactid=".0.1.0.0.0.0.$1.3" type="button"><span class="glyphicon glyphicon-random" data-reactid=
+              ".0.1.0.0.0.0.$1.3.0"></span></button>
+            </div>
+          </div>
+
+          <div class="bracket-enter" data-reactid=".0.1.0.0.0.1" title="2015-03-19T16:15:00.000Z">
+            <button class="btn btn-primary btn-block" data-reactid=".0.1.0.0.0.1.0" disabled type="button"><span data-reactid=".0.1.0.0.0.1.0.0">Brackets lock</span> <span data-reactid=
+            ".0.1.0.0.0.1.0.1">3 days from now</span></button>
+          </div>
+
+          <div class="bracket-progress" data-reactid=".0.1.0.0.0.2">
+            <div class="progress progress-striped" data-reactid=".0.1.0.0.0.2.0">
+              <div class="progress-bar" data-reactid=".0.1.0.0.0.2.0.0" style="width: 0%;">
+                <span data-reactid=".0.1.0.0.0.2.0.0.0"><span data-reactid=".0.1.0.0.0.2.0.0.0.0">0</span> <span data-reactid=".0.1.0.0.0.2.0.0.0.1">of</span> <span data-reactid=
+                ".0.1.0.0.0.2.0.0.0.2">63</span> <span data-reactid=".0.1.0.0.0.2.0.0.0.3">picks made</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bracket row" data-reactid=".0.1.0.3">
+        <div class="col-md-6 region-side left-side" data-reactid=".0.1.0.3.0">
+          <section class="region initial-region" data-id="MW" data-reactid=".0.1.0.3.0.0">
+            <h2 class="region-name" data-reactid=".0.1.0.3.0.0.0">Midwest</h2>
+
+            <div class="rounds" data-reactid=".0.1.0.3.0.0.1">
+              <div class="rounds-scroll" data-reactid=".0.1.0.3.0.0.1.0">
+                <div class="round" data-reactid=".0.1.0.3.0.0.1.0.$0">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$0">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$0">
+                      <a class="team pickable" data-id="MW1" data-name="Kentucky" data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$0.0" data-region="MW" data-seed="1"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$0.$0.0.0">1</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$0.0.1">Kentucky</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$1">
+                      <a class="team pickable" data-id="MW16" data-name="Hampton / Manhattan" data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$1.0" data-region="MW" data-seed="16"><span class="seed"
+                      data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$1.0.0">16</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$1.0.1">Hampton / Manhattan</span><span class="should-be hide"
+                      data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$1">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$0">
+                      <a class="team pickable" data-id="MW8" data-name="Cincinnati" data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$0.0" data-region="MW" data-seed="8"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$1.$0.0.0">8</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$0.0.1">Cincinnati</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$1">
+                      <a class="team pickable" data-id="MW9" data-name="Purdue" data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$1.0" data-region="MW" data-seed="9"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$1.$1.0.0">9</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$1.0.1">Purdue</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$2">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$0">
+                      <a class="team pickable" data-id="MW5" data-name="West Virginia" data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$0.0" data-region="MW" data-seed="5"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$2.$0.0.0">5</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$0.0.1">West Virginia</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$1">
+                      <a class="team pickable" data-id="MW12" data-name="Buffalo" data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$1.0" data-region="MW" data-seed="12"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$2.$1.0.0">12</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$1.0.1">Buffalo</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$3">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$0">
+                      <a class="team pickable" data-id="MW4" data-name="Maryland" data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$0.0" data-region="MW" data-seed="4"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$3.$0.0.0">4</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$0.0.1">Maryland</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$1">
+                      <a class="team pickable" data-id="MW13" data-name="Valparaiso" data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$1.0" data-region="MW" data-seed="13"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$3.$1.0.0">13</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$1.0.1">Valparaiso</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$4">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$0">
+                      <a class="team pickable" data-id="MW6" data-name="Butler" data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$0.0" data-region="MW" data-seed="6"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$4.$0.0.0">6</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$0.0.1">Butler</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$4.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$4.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$1">
+                      <a class="team pickable" data-id="MW11" data-name="Texas" data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$1.0" data-region="MW" data-seed="11"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$4.$1.0.0">11</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$1.0.1">Texas</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$4.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$4.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$4.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$5">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$0">
+                      <a class="team pickable" data-id="MW3" data-name="Notre Dame" data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$0.0" data-region="MW" data-seed="3"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$5.$0.0.0">3</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$0.0.1">Notre Dame</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$5.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$5.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$1">
+                      <a class="team pickable" data-id="MW14" data-name="Northeastern" data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$1.0" data-region="MW" data-seed="14"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$5.$1.0.0">14</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$1.0.1">Northeastern</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$5.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$5.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$5.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$6">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$0">
+                      <a class="team pickable" data-id="MW7" data-name="Wichita State" data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$0.0" data-region="MW" data-seed="7"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$6.$0.0.0">7</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$0.0.1">Wichita State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$6.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$6.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$1">
+                      <a class="team pickable" data-id="MW10" data-name="Indiana" data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$1.0" data-region="MW" data-seed="10"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$6.$1.0.0">10</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$1.0.1">Indiana</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$6.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$6.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$6.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$0.$7">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$0">
+                      <a class="team pickable" data-id="MW2" data-name="Kansas" data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$0.0" data-region="MW" data-seed="2"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$7.$0.0.0">2</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$0.0.1">Kansas</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$7.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$7.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$1">
+                      <a class="team pickable" data-id="MW15" data-name="New Mexico State" data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$1.0" data-region="MW" data-seed="15"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$7.$1.0.0">15</span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$1.0.1">New Mexico State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$7.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$0.$7.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$0.$7.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.0.1.0.$1">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$1.$0">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$1.$1">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$1.$2">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$2.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$2.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$1.$3">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$3.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$3.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$1.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$1.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.0.1.0.$2">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$2.$0">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$2.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$2.$1">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$2.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$2.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.0.1.0.$3">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$3.$0">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$0">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$0.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$3.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$3.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$3.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$1">
+                      <a class="team pickable" data-id="MWundefined" data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$1.0" data-region="MW"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$3.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$3.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$3.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$3.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.0.1.0.$4">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.0.1.0.$4.$0">
+                    <li data-reactid=".0.1.0.3.0.0.1.0.$4.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.0.0.1.0.$4.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$4.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.0.1.0.$4.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$4.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.0.1.0.$4.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.0.1.0.$4.$0.$0.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="final-round-borders" data-reactid=".0.1.0.3.0.1"></div>
+
+          <section class="region initial-region" data-id="W" data-reactid=".0.1.0.3.0.2">
+            <h2 class="region-name" data-reactid=".0.1.0.3.0.2.0">West</h2>
+
+            <div class="rounds" data-reactid=".0.1.0.3.0.2.1">
+              <div class="rounds-scroll" data-reactid=".0.1.0.3.0.2.1.0">
+                <div class="round" data-reactid=".0.1.0.3.0.2.1.0.$0">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$0">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$0">
+                      <a class="team pickable" data-id="W1" data-name="Wisconsin" data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$0.0" data-region="W" data-seed="1"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$0.$0.0.0">1</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$0.0.1">Wisconsin</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$1">
+                      <a class="team pickable" data-id="W16" data-name="Coastal Carolina" data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$1.0" data-region="W" data-seed="16"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$0.$1.0.0">16</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$1.0.1">Coastal Carolina</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$1">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$0">
+                      <a class="team pickable" data-id="W8" data-name="Oregon" data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$0.0" data-region="W" data-seed="8"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$1.$0.0.0">8</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$0.0.1">Oregon</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$1">
+                      <a class="team pickable" data-id="W9" data-name="Oklahoma St" data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$1.0" data-region="W" data-seed="9"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$1.$1.0.0">9</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$1.0.1">Oklahoma St</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$2">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$0">
+                      <a class="team pickable" data-id="W5" data-name="Arkansas" data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$0.0" data-region="W" data-seed="5"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$2.$0.0.0">5</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$0.0.1">Arkansas</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$1">
+                      <a class="team pickable" data-id="W12" data-name="Wofford" data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$1.0" data-region="W" data-seed="12"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$2.$1.0.0">12</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$1.0.1">Wofford</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$3">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$0">
+                      <a class="team pickable" data-id="W4" data-name="North Carolina" data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$0.0" data-region="W" data-seed="4"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$3.$0.0.0">4</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$0.0.1">North Carolina</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$1">
+                      <a class="team pickable" data-id="W13" data-name="Harvard" data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$1.0" data-region="W" data-seed="13"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$3.$1.0.0">13</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$1.0.1">Harvard</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$4">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$0">
+                      <a class="team pickable" data-id="W6" data-name="Xavier" data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$0.0" data-region="W" data-seed="6"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$4.$0.0.0">6</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$0.0.1">Xavier</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$4.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$4.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$1">
+                      <a class="team pickable" data-id="W11" data-name="BYU / Ole Miss" data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$1.0" data-region="W" data-seed="11"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$4.$1.0.0">11</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$1.0.1">BYU / Ole Miss</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$4.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$4.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$4.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$5">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$0">
+                      <a class="team pickable" data-id="W3" data-name="Baylor" data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$0.0" data-region="W" data-seed="3"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$5.$0.0.0">3</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$0.0.1">Baylor</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$5.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$5.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$1">
+                      <a class="team pickable" data-id="W14" data-name="Georgia St" data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$1.0" data-region="W" data-seed="14"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$5.$1.0.0">14</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$1.0.1">Georgia St</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$5.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$5.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$5.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$6">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$0">
+                      <a class="team pickable" data-id="W7" data-name="Virginia Commonwealth" data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$0.0" data-region="W" data-seed="7"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$6.$0.0.0">7</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$0.0.1">Virginia Commonwealth</span><span class="should-be hide"
+                      data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$6.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$1">
+                      <a class="team pickable" data-id="W10" data-name="Ohio St" data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$1.0" data-region="W" data-seed="10"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$6.$1.0.0">10</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$1.0.1">Ohio St</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$6.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$6.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$6.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$0.$7">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$0">
+                      <a class="team pickable" data-id="W2" data-name="Arizona" data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$0.0" data-region="W" data-seed="2"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$7.$0.0.0">2</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$0.0.1">Arizona</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$7.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$7.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$1">
+                      <a class="team pickable" data-id="W15" data-name="Texas Southern" data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$1.0" data-region="W" data-seed="15"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$7.$1.0.0">15</span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$1.0.1">Texas Southern</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$7.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$0.$7.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$0.$7.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.2.1.0.$1">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$1.$0">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$1.$1">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$1.$2">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$2.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$2.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$1.$3">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$3.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$3.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$1.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$1.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.2.1.0.$2">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$2.$0">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$2.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$2.$1">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$2.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$2.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.2.1.0.$3">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$3.$0">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$0">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$0.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$3.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$3.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$3.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$1">
+                      <a class="team pickable" data-id="Wundefined" data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$1.0" data-region="W"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$3.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$3.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$3.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$3.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.0.2.1.0.$4">
+                  <ul class="matchup" data-reactid=".0.1.0.3.0.2.1.0.$4.$0">
+                    <li data-reactid=".0.1.0.3.0.2.1.0.$4.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.0.2.1.0.$4.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$4.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.0.2.1.0.$4.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$4.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.0.2.1.0.$4.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.0.2.1.0.$4.$0.$0.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="final-round-borders" data-reactid=".0.1.0.3.0.3"></div>
+        </div>
+
+        <div class="col-md-6 region-side right-side" data-reactid=".0.1.0.3.1">
+          <section class="region initial-region" data-id="E" data-reactid=".0.1.0.3.1.0">
+            <h2 class="region-name" data-reactid=".0.1.0.3.1.0.0">East</h2>
+
+            <div class="rounds" data-reactid=".0.1.0.3.1.0.1">
+              <div class="rounds-scroll" data-reactid=".0.1.0.3.1.0.1.0">
+                <div class="round" data-reactid=".0.1.0.3.1.0.1.0.$0">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$0">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$0">
+                      <a class="team pickable" data-id="E1" data-name="Villanova" data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$0.0" data-region="E" data-seed="1"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$0.$0.0.0">1</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$0.0.1">Villanova</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$1">
+                      <a class="team pickable" data-id="E16" data-name="Lafayette" data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$1.0" data-region="E" data-seed="16"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$0.$1.0.0">16</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$1.0.1">Lafayette</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$1">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$0">
+                      <a class="team pickable" data-id="E8" data-name="North Carolina State" data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$0.0" data-region="E" data-seed="8"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$1.$0.0.0">8</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$0.0.1">North Carolina State</span><span class="should-be hide"
+                      data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$1">
+                      <a class="team pickable" data-id="E9" data-name="Louisiana State" data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$1.0" data-region="E" data-seed="9"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$1.$1.0.0">9</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$1.0.1">Louisiana State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$2">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$0">
+                      <a class="team pickable" data-id="E5" data-name="Northern Iowa" data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$0.0" data-region="E" data-seed="5"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$2.$0.0.0">5</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$0.0.1">Northern Iowa</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$1">
+                      <a class="team pickable" data-id="E12" data-name="Wyoming" data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$1.0" data-region="E" data-seed="12"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$2.$1.0.0">12</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$1.0.1">Wyoming</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$3">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$0">
+                      <a class="team pickable" data-id="E4" data-name="Louisville" data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$0.0" data-region="E" data-seed="4"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$3.$0.0.0">4</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$0.0.1">Louisville</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$1">
+                      <a class="team pickable" data-id="E13" data-name="Cal Irvine" data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$1.0" data-region="E" data-seed="13"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$3.$1.0.0">13</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$1.0.1">Cal Irvine</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$4">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$0">
+                      <a class="team pickable" data-id="E6" data-name="Providence" data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$0.0" data-region="E" data-seed="6"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$4.$0.0.0">6</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$0.0.1">Providence</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$4.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$4.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$1">
+                      <a class="team pickable" data-id="E11" data-name="Boise St / Dayton" data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$1.0" data-region="E" data-seed="11"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$4.$1.0.0">11</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$1.0.1">Boise St / Dayton</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$4.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$4.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$4.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$5">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$0">
+                      <a class="team pickable" data-id="E3" data-name="Oklahoma" data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$0.0" data-region="E" data-seed="3"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$5.$0.0.0">3</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$0.0.1">Oklahoma</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$5.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$5.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$1">
+                      <a class="team pickable" data-id="E14" data-name="Albany" data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$1.0" data-region="E" data-seed="14"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$5.$1.0.0">14</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$1.0.1">Albany</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$5.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$5.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$5.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$6">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$0">
+                      <a class="team pickable" data-id="E7" data-name="Michigan State" data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$0.0" data-region="E" data-seed="7"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$6.$0.0.0">7</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$0.0.1">Michigan State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$6.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$6.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$1">
+                      <a class="team pickable" data-id="E10" data-name="Georgia" data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$1.0" data-region="E" data-seed="10"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$6.$1.0.0">10</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$1.0.1">Georgia</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$6.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$6.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$6.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$0.$7">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$0">
+                      <a class="team pickable" data-id="E2" data-name="Virginia" data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$0.0" data-region="E" data-seed="2"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$7.$0.0.0">2</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$0.0.1">Virginia</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$7.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$7.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$1">
+                      <a class="team pickable" data-id="E15" data-name="Belmont" data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$1.0" data-region="E" data-seed="15"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$7.$1.0.0">15</span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$1.0.1">Belmont</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$7.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$0.$7.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$0.$7.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.0.1.0.$1">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$1.$0">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$1.$1">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$1.$2">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$2.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$2.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$1.$3">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$3.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$3.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$1.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$1.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.0.1.0.$2">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$2.$0">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$2.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$2.$1">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$2.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$2.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.0.1.0.$3">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$3.$0">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$0">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$0.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$3.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$3.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$3.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$1">
+                      <a class="team pickable" data-id="Eundefined" data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$1.0" data-region="E"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$3.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$3.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$3.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$3.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.0.1.0.$4">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.0.1.0.$4.$0">
+                    <li data-reactid=".0.1.0.3.1.0.1.0.$4.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.1.0.1.0.$4.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$4.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.0.1.0.$4.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$4.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.0.1.0.$4.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.0.1.0.$4.$0.$0.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="final-round-borders" data-reactid=".0.1.0.3.1.1"></div>
+
+          <section class="region initial-region" data-id="S" data-reactid=".0.1.0.3.1.2">
+            <h2 class="region-name" data-reactid=".0.1.0.3.1.2.0">South</h2>
+
+            <div class="rounds" data-reactid=".0.1.0.3.1.2.1">
+              <div class="rounds-scroll" data-reactid=".0.1.0.3.1.2.1.0">
+                <div class="round" data-reactid=".0.1.0.3.1.2.1.0.$0">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$0">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$0">
+                      <a class="team pickable" data-id="S1" data-name="Duke" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$0.0" data-region="S" data-seed="1"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$0.$0.0.0">1</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$0.0.1">Duke</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$1">
+                      <a class="team pickable" data-id="S16" data-name="North Florida / Robert Morris" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$1.0" data-region="S" data-seed="16"><span class="seed"
+                      data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$1.0.0">16</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$1.0.1">North Florida / Robert Morris</span><span class=
+                      "should-be hide" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$1">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$0">
+                      <a class="team pickable" data-id="S8" data-name="San Diego State" data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$0.0" data-region="S" data-seed="8"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$1.$0.0.0">8</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$0.0.1">San Diego State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$1">
+                      <a class="team pickable" data-id="S9" data-name="St. John's" data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$1.0" data-region="S" data-seed="9"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$1.$1.0.0">9</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$1.0.1">St. John's</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$2">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$0">
+                      <a class="team pickable" data-id="S5" data-name="Utah" data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$0.0" data-region="S" data-seed="5"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$2.$0.0.0">5</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$0.0.1">Utah</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$1">
+                      <a class="team pickable" data-id="S12" data-name="Stephen F. Austin" data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$1.0" data-region="S" data-seed="12"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$2.$1.0.0">12</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$1.0.1">Stephen F. Austin</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$3">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$0">
+                      <a class="team pickable" data-id="S4" data-name="Georgetown" data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$0.0" data-region="S" data-seed="4"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$3.$0.0.0">4</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$0.0.1">Georgetown</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$1">
+                      <a class="team pickable" data-id="S13" data-name="Eastern Washington" data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$1.0" data-region="S" data-seed="13"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$3.$1.0.0">13</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$1.0.1">Eastern Washington</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$4">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$0">
+                      <a class="team pickable" data-id="S6" data-name="Southern Methodist" data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$0.0" data-region="S" data-seed="6"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$4.$0.0.0">6</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$0.0.1">Southern Methodist</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$4.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$4.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$1">
+                      <a class="team pickable" data-id="S11" data-name="UCLA" data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$1.0" data-region="S" data-seed="11"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$4.$1.0.0">11</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$1.0.1">UCLA</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$4.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$4.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$4.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$5">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$0">
+                      <a class="team pickable" data-id="S3" data-name="Iowa State" data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$0.0" data-region="S" data-seed="3"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$5.$0.0.0">3</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$0.0.1">Iowa State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$5.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$5.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$1">
+                      <a class="team pickable" data-id="S14" data-name="UAB" data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$1.0" data-region="S" data-seed="14"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$5.$1.0.0">14</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$1.0.1">UAB</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$5.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$5.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$5.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$6">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$0">
+                      <a class="team pickable" data-id="S7" data-name="Iowa" data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$0.0" data-region="S" data-seed="7"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$6.$0.0.0">7</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$0.0.1">Iowa</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$6.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$6.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$1">
+                      <a class="team pickable" data-id="S10" data-name="Davidson" data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$1.0" data-region="S" data-seed="10"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$6.$1.0.0">10</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$1.0.1">Davidson</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$6.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$6.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$6.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$0.$7">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$0">
+                      <a class="team pickable" data-id="S2" data-name="Gonzaga" data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$0.0" data-region="S" data-seed="2"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$7.$0.0.0">2</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$0.0.1">Gonzaga</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$7.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$7.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$1">
+                      <a class="team pickable" data-id="S15" data-name="North Dakota State" data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$1.0" data-region="S" data-seed="15"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$7.$1.0.0">15</span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$1.0.1">North Dakota State</span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$7.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$0.$7.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$0.$7.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.2.1.0.$1">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$1.$0">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$1.$1">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$1.$2">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$2.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$2.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$2.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$2.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$2.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$2.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$2.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$1.$3">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$3.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$3.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$3.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$3.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$3.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$1.$3.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$1.$3.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.2.1.0.$2">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$2.$0">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$2.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$2.$1">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$2.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$2.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.2.1.0.$3">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$3.$0">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$0">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$0.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$3.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$3.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$3.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$1">
+                      <a class="team pickable" data-id="Sundefined" data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$1.0" data-region="S"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$3.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$3.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$3.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$3.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.1.2.1.0.$4">
+                  <ul class="matchup" data-reactid=".0.1.0.3.1.2.1.0.$4.$0">
+                    <li data-reactid=".0.1.0.3.1.2.1.0.$4.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.1.2.1.0.$4.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$4.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.1.2.1.0.$4.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$4.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.1.2.1.0.$4.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.1.2.1.0.$4.$0.$0.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="final-round-borders" data-reactid=".0.1.0.3.1.3"></div>
+        </div>
+
+        <div class="col-md-12 final-region-container" data-reactid=".0.1.0.3.2">
+          <section class="region final-region" data-id="FF" data-reactid=".0.1.0.3.2.0">
+            <h2 class="region-name" data-reactid=".0.1.0.3.2.0.0">Final Four (0/3)</h2>
+
+            <div class="rounds" data-reactid=".0.1.0.3.2.0.1">
+              <div class="rounds-scroll" data-reactid=".0.1.0.3.2.0.1.0">
+                <div class="round" data-reactid=".0.1.0.3.2.0.1.0.$0">
+                  <ul class="matchup" data-reactid=".0.1.0.3.2.0.1.0.$0.$0">
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$1">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$1.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$0.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="matchup" data-reactid=".0.1.0.3.2.0.1.0.$0.$1">
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$1.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$1.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$1.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$1">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$1.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$1.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$1.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$0.$1.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$0.$1.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.2.0.1.0.$1">
+                  <ul class="matchup" data-reactid=".0.1.0.3.2.0.1.0.$1.$0">
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$1.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$1.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$1.$0.$0.0.2.1"></span></span></a>
+                    </li>
+
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$1">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$1.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$1.$0.$1.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$1.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$1.$0.$1.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$1.$0.$1.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$1.$0.$1.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="round" data-reactid=".0.1.0.3.2.0.1.0.$2">
+                  <ul class="matchup" data-reactid=".0.1.0.3.2.0.1.0.$2.$0">
+                    <li data-reactid=".0.1.0.3.2.0.1.0.$2.$0.$0">
+                      <a class="team pickable" data-id="FFundefined" data-reactid=".0.1.0.3.2.0.1.0.$2.$0.$0.0" data-region="FF"><span class="seed" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$2.$0.$0.0.0"></span><span class="team-name" data-reactid=".0.1.0.3.2.0.1.0.$2.$0.$0.0.1"></span><span class="should-be hide" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$2.$0.$0.0.2"><span class="seed" data-reactid=".0.1.0.3.2.0.1.0.$2.$0.$0.0.2.0"></span><span class="team-name" data-reactid=
+                      ".0.1.0.3.2.0.1.0.$2.$0.$0.0.2.1"></span></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

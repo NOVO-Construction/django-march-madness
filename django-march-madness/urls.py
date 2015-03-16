@@ -20,4 +20,5 @@ urlpatterns = patterns(
     url(r'^djrill/', include(djrill_urls)),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     url(r'^users/', include('users.urls', namespace='users')),
+    url(r'^madness/', include('madness.urls', namespace='madness')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
