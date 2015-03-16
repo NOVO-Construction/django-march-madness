@@ -65,16 +65,7 @@ class Production(Common):
     # END EMAIL
 
     # ######### DATABASE CONFIGURATION
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'madness',
-            'USER': values.SecretValue(environ_prefix='', environ_name='MYSQL_USER'),
-            'PASSWORD': values.SecretValue(environ_prefix='', environ_name='MYSQL_PASSWORD'),
-            'HOST': str(values.SecretValue(environ_prefix='', environ_name='MYSQL_HOST')),
-            'PORT': '3306',
-        }
-    }
+    DATABASES = values.DatabaseURLValue()
     # ######### END DATABASE CONFIGURATION
 
     # TEMPLATE CONFIGURATION

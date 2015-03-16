@@ -15,16 +15,7 @@ class Local(Common):
     DEFAULT_PORT = 8080
     # ######### DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'madness_dev',
-            'USER': 'root',
-            'PASSWORD': '',
-            'HOST': '127.0.0.1',
-            'PORT': '3306',
-        }
-    }
+    DATABASES = values.DatabaseURLValue('mysql://root@127.0.0.1:3306/madness_dev')
     # ######### END DATABASE CONFIGURATION
 
     # DEBUG
