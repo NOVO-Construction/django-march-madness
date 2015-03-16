@@ -58,6 +58,7 @@ class Production(Common):
     # EMAIL
     EMAIL_BACKEND = 'djrill.mail.backends.djrill.DjrillBackend'
     MANDRILL_API_KEY = values.SecretValue(environ_prefix='', environ_name='MANDRILL_API_KEY')
+    MANDRILL_SUBACCOUNT = values.Value('march-madness', environ_prefix='', environ_name='MANDRILL_SUBACCOUNT')
 
     DEFAULT_FROM_EMAIL = values.Value('django-march-madness <noreply@novoconstruction.com>')
     EMAIL_SUBJECT_PREFIX = values.Value('[django-march-madness] ', environ_name='EMAIL_SUBJECT_PREFIX')
@@ -88,4 +89,43 @@ class Production(Common):
     }
     # ######### END CACHE CONFIGURATION
 
+    # ######### STATICFILES_STORAGE CONFIGURATION
+    # See: https://docs.djangoproject.com/en/1.7/ref/contrib/staticfiles/#manifeststaticfilesstorage
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+    # ######### END STATICFILES_STORAGE CONFIGURATION
+
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'handlers': {
+            'mail_admins': {
+                'class': 'django.utils.log.AdminEmailHandler',
+                'level': 'ERROR',
+                'include_html': True,
+            },
+            'logfile': {
+                'class': 'logging.handlers.WatchedFileHandler',
+                'filename': '/home/ec2-user/madness.log'
+            },
+        },
+        'loggers': {
+            'django.request': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django': {
+                'handlers': ['logfile'],
+                'level': 'ERROR',
+                'propagate': False,
+            },
+            'django-march-madness': {
+                'handlers': ['logfile'],
+                'level': 'INFO',
+                'propagate': False
+            },
+        },
+    }
+
     # Your production stuff: Below this line define 3rd party library settings
+    ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
