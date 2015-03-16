@@ -5,7 +5,7 @@ DJANGODIR=/home/ec2-user/madness/django-march-madness   # Django project directo
 PORT=8000                                               # we will communicte using this unix socket
 USER=ec2-user                                           # the user to run as
 GROUP=ec2-user                                          # the group to run as
-NUM_WORKERS=9                                           # how many worker processes should Gunicorn spawn
+NUM_WORKERS=2                                           # how many worker processes should Gunicorn spawn
 # DJANGO_SETTINGS_MODULE=config.settings.production     # which settings file should Django use
 DJANGO_WSGI_MODULE=wsgi                                 # WSGI module name
 
