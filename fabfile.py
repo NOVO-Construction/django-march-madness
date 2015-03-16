@@ -50,6 +50,7 @@ def push():
             run("git pull origin %(branch)s" % env)
         deploy_requirements()
         managepy('migrate')
+        managepy('collectstatic --noinput --clear')
         reload_gunicorn()
 
 
