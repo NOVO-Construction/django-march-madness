@@ -6,6 +6,9 @@ class Region(models.Model):
 	name = models.CharField(max_length=50, blank=False)
 	grid = models.IntegerField(max_length=1, blank=False)
 
+	def __unicode__(self):
+		return u'%s' % (self.name)
+
 
 class ScoreLink(models.Model):
 	espn = models.IntegerField(max_length=11)
@@ -17,21 +20,25 @@ class Team(models.Model):
 	name = models.CharField(max_length=100, blank=False)
 	mascot = models.CharField(max_length=100, blank=False)
 	abbreviation = models.CharField(max_length=4, blank=False)
-	score_link = models.ForeignKey(ScoreLink)
+	score_link = models.ForeignKey(ScoreLink, blank=True, null=True)
+
+	def __unicode__(self):
+		return u'%s %s' % (self.name, self.mascot)
 
 
 class Bracket(models.Model):
-	year = models.IntegerField(max_length=4, blank=False)
+	year = models.IntegerField(max_length=4, blank=False, default=2015)
 	team = models.ForeignKey(Team)
 	region = models.ForeignKey(Region)
 	seed = models.IntegerField(max_length=2, blank=False)
 
+	def __unicode__(self):
+		return u'(%s) %s - %s %s' % (self.seed, self.team, self.year, self.region)
+
 
 class Game(models.Model):
-	year = models.IntegerField(max_length=4, blank=False)
-	region = models.ForeignKey(Region)
-	team_1 = models.ForeignKey(Bracket)
-	team_2 = models.ForeignKey(Bracket)
+	team_1 = models.ForeignKey(Bracket, related_name='+')
+	team_2 = models.ForeignKey(Bracket, related_name='+')
 	team_1_score = models.IntegerField(max_length=4, blank=True)
 	team_2_score = models.IntegerField(max_length=4, blank=True)
 
@@ -56,3 +63,6 @@ class Standing(models.Model):
 	points = models.IntegerField(default=0)
 
 
+class Result(models.Model):
+	game = models.ForeignKey(Game)
+	winner = models.ForeignKey(Bracket)
