@@ -20,7 +20,7 @@ class Production(Common):
     # END INSTALLED_APPS
 
     # SECRET KEY
-    SECRET_KEY = values.SecretValue(environ_prefix="", environ_name='SECRET_KEY')
+    SECRET_KEY = values.SecretValue(environ_prefix='', environ_name='SECRET_KEY')
     # END SECRET KEY
 
     # django-secure
@@ -57,7 +57,7 @@ class Production(Common):
 
     # EMAIL
     EMAIL_BACKEND = 'djrill.mail.backends.djrill.DjrillBackend'
-    MANDRILL_API_KEY = values.SecretValue(environ_prefix="", environ_name='MANDRILL_API_KEY')
+    MANDRILL_API_KEY = values.SecretValue(environ_prefix='', environ_name='MANDRILL_API_KEY')
 
     DEFAULT_FROM_EMAIL = values.Value('django-march-madness <noreply@novoconstruction.com>')
     EMAIL_SUBJECT_PREFIX = values.Value('[django-march-madness] ', environ_name='EMAIL_SUBJECT_PREFIX')
@@ -69,9 +69,9 @@ class Production(Common):
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'madness',
-            'USER': values.SecretValue(environ_prefix="", environ_name='MYSQL_USER'),
-            'PASSWORD': values.SecretValue(environ_prefix="", environ_name='MYSQL_PASSWORD'),
-            'HOST': values.SecretValue(environ_prefix="", environ_name='MYSQL_HOST'),
+            'USER': values.SecretValue(environ_prefix='', environ_name='MYSQL_USER'),
+            'PASSWORD': values.SecretValue(environ_prefix='', environ_name='MYSQL_PASSWORD'),
+            'HOST': str(values.SecretValue(environ_prefix='', environ_name='MYSQL_HOST')),
             'PORT': '3306',
         }
     }
