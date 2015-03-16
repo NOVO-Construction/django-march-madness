@@ -93,7 +93,7 @@ class Common(Configuration):
     # END FIXTURE CONFIGURATION
 
     # EMAIL CONFIGURATION
-    EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
+    EMAIL_BACKEND = values.Value('djrill.mail.backends.djrill.DjrillBackend')
     # END EMAIL CONFIGURATION
 
     # MANAGER CONFIGURATION
