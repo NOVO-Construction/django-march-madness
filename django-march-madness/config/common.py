@@ -29,14 +29,10 @@ class Common(Configuration):
         'django.contrib.sites',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-
-        # Useful template tags:
-        # 'django.contrib.humanize',
-
-        # Admin
         'django.contrib.admin',
     )
     THIRD_PARTY_APPS = (
+        'allauth.socialaccount.providers.google',
         'allauth.account',
         'allauth.socialaccount',
         'allauth',
