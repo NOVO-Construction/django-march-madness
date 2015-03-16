@@ -88,4 +88,9 @@ class Production(Common):
     }
     # ######### END CACHE CONFIGURATION
 
+    # ######### STATICFILES_STORAGE CONFIGURATION
+    # See: https://docs.djangoproject.com/en/1.7/ref/contrib/staticfiles/#manifeststaticfilesstorage
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+    # ######### END STATICFILES_STORAGE CONFIGURATION
+
     # Your production stuff: Below this line define 3rd party library settings
