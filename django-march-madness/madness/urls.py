@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = patterns(
     'madness',
-    url(r'^bracket/$', views.EntryPicks, name='entry_picks'),
+    url(r'^bracket/$', views.EnterPicksView.as_view(), name='entry_picks'),
 )
