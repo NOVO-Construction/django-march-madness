@@ -33,13 +33,8 @@ class Bracket(models.Model):
     region = models.ForeignKey(Region)
     seed = models.IntegerField(max_length=2, blank=False)
 
-<<<<<<< HEAD
-	def __unicode__(self):
-		return u'(%s) %s' % (self.seed, self.team.name)
-=======
     def __unicode__(self):
-        return u'(%s) %s - %s %s' % (self.seed, self.team, self.year, self.region)
->>>>>>> 580ecc28f3b423b9a27bd7ea6a96352692519065
+		return u'(%s) %s' % (self.seed, self.team.name)
 
 
 class Game(models.Model):
