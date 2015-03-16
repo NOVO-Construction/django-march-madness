@@ -1,6 +1,6 @@
 from os.path import dirname, join, normpath
 
-from fabric.api import cd, env, local, run, sudo
+from fabric.api import cd, env, local, run, sudo, shell_env
 from fabric.operations import put
 
 env.hosts = ['madness.novoconstruction.com']
@@ -12,6 +12,9 @@ env.python = normpath(join(env.virtualenv, 'bin', 'python'))
 env.pip = normpath(join(env.virtualenv, 'bin', 'pip'))
 env.branch = 'master'
 env.local_root_path = path = dirname(__file__)
+env.DJANGO_CONFIGURATION = 'Production'
+env.DJANGO_SETTINGS_MODULE = 'config.production'
+env.environment = 'production'
 
 
 def install_software():
@@ -41,12 +44,13 @@ def reload_gunicorn():
 
 
 def push():
-    with cd("%(deploy_base)s" % env):
-        run("git pull origin %(branch)s" % env)
-    deploy_requirements()
-    managepy('migrate')
-    clean_pyc()
-    reload_gunicorn()
+    """Push out new code to the server."""
+    with shell_env(DJANGO_CONFIGURATION=env.DJANGO_CONFIGURATION, DJANGO_SETTINGS_MODULE=env.DJANGO_SETTINGS_MODULE):
+        with cd("%(deploy_base)s" % env):
+            run("git pull origin %(branch)s" % env)
+        deploy_requirements()
+        managepy('migrate')
+        reload_gunicorn()
 
 
 def deploy_supervisor():

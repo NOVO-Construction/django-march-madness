@@ -1,31 +1,33 @@
 from django.contrib import admin
+
 from madness.models import Bracket, Entry, EntryPick, Game, Region, Team
+
 
 @admin.register(Region)
 class RegionAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 @admin.register(Bracket)
 class BracketAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 @admin.register(Game)
 class GameAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 @admin.register(EntryPick)
 class EntryPickAdmin(admin.ModelAdmin):
-	pass
+    pass
