@@ -20,7 +20,7 @@ class Production(Common):
     # END INSTALLED_APPS
 
     # SECRET KEY
-    SECRET_KEY = values.SecretValue()
+    SECRET_KEY = values.SecretValue(environ_prefix="", environ_name='SECRET_KEY')
     # END SECRET KEY
 
     # django-secure
