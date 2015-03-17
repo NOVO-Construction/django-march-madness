@@ -78,6 +78,8 @@ class EntryPick(TimeStampedModel):
             'pick_team_name': self.pick.team.name,
             'pick_team_mascot': self.pick.team.mascot,
             'pick_team_abbreviation': self.pick.team.abbreviation,
+            'pick_team_seed': self.pick.seed,
+            'pick_team_display': '({}) {}'.format(self.pick.seed, self.pick.team.name),
         }
 
 
