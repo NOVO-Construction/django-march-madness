@@ -40,23 +40,31 @@ class EnterPicksView(LoginRequiredMixin, DetailView):
         return models.Entry.objects.filter(user=self.request.user)
 
 
-class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, AjaxResponseMixin, DetailView):
-    # require_json = True
+class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailView):
     model = models.Entry
 
     def get_queryset(self):
         return models.Entry.objects.filter(user=self.request.user)
 
-    def get_ajax(self, request, *args, **kwargs):
-        log.debug(self.request_json)
-        return self.render_json_response({'message': 'fpp'})
+    def get_picks(self):
+        entry = self.object
+        picks = entry.entrypick_set.select_related('game', 'pick')
+        if not picks:
+            return None
+        return picks.values()
 
-    def post_ajax(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
+        super(EnterPicksAjaxView, self).get(request, *args, **kwargs)
+        log.debug(self.request_json)
+        return self.render_json_response(self.get_picks())
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
         log.debug(self.request_json)
         try:
             game = self.request_json['game']
         except KeyError:
-            return self.render_bad_request_response({'message': ('Your pick has been made')})
+            return self.render_bad_request_response({'message': ('must supply game and team')})
         message = 'Created pick for user {} game {}'.format(request.user, game)
         log.debug(message)
-        return self.render_json_response({'message': message})
+        return self.render_json_response(self.get_picks())
