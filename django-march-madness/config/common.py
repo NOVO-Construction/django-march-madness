@@ -32,6 +32,7 @@ class Common(Configuration):
         'django.contrib.admin',
     )
     THIRD_PARTY_APPS = (
+        'allauth.socialaccount.providers.facebook',
         'allauth.socialaccount.providers.google',
         'allauth.account',
         'allauth.socialaccount',
