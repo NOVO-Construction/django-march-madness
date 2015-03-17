@@ -33,6 +33,16 @@
           <li><a href="{% url 'rules' %}">Rules</a></li>
 
           {% if request.user.is_authenticated %}
+            {% if request.user.entry_set.all %}
+            <li>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">My Brackets <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+              {% for b in request.user.entry_set.all %}
+                <li><a href="{% url 'madness:entry_picks' b.pk %}">{{ b.name }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
             <li><a href="{% url 'madness:create_entry' %}">New Bracket</a></li>
             <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
             <li><a href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
@@ -65,6 +75,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
       <script src="{% static 'js/project.js' %}"></script>
+      <script src="{% static 'js/countdown.min.js' %}" type="text/javascript"></script>
     {% endblock javascript %}
 
     {% block extra_javascript %}

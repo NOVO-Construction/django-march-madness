@@ -19,8 +19,12 @@
 <div class="row">
   <div class="col-sm-12">
     <h2>My Brackets</h2>
-    {% if not brackets %}
+    {% if not object.entry_set.all %}
       <p>You have no brackets, <a href="{% url 'madness:create_entry' %}">enter one here</a>.</p>
+    {% else %}
+    {% for b in object.entry_set.all %}
+    <p><a href="{% url 'madness:entry_picks' b.pk %}">{{ b.name }}</p>
+    {% endfor %}
     {% endif %}
   </div>
 </div>

@@ -65,3 +65,7 @@ footer {
 .navbar a {
   color: #C1B691;
 }
+
+#countdown {
+  width: 410px;
+}
