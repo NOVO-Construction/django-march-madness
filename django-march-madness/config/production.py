@@ -115,12 +115,12 @@ class Production(Common):
                 'propagate': True,
             },
             'django': {
-                'handlers': ['logfile'],
+                'handlers': ['logfile', 'mail_admins'],
                 'level': 'ERROR',
                 'propagate': False,
             },
             'madness': {
-                'handlers': ['logfile'],
+                'handlers': ['logfile', 'mail_admins'],
                 'level': 'INFO',
                 'propagate': False
             },

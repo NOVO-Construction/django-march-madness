@@ -32,6 +32,7 @@ class Common(Configuration):
         'django.contrib.admin',
     )
     THIRD_PARTY_APPS = (
+        'allauth.socialaccount.providers.facebook',
         'allauth.socialaccount.providers.google',
         'allauth.account',
         'allauth.socialaccount',
@@ -93,13 +94,14 @@ class Common(Configuration):
     # END FIXTURE CONFIGURATION
 
     # EMAIL CONFIGURATION
-    EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
+    EMAIL_BACKEND = values.Value('djrill.mail.backends.djrill.DjrillBackend')
     # END EMAIL CONFIGURATION
 
     # MANAGER CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
     ADMINS = (
-        ("""Colin Stoner""", 'cstoner@novoconstruction.com'),
+        ('Colin Stoner', 'cstoner@novoconstruction.com'),
+        ('Sam Kuehn', 'skuehn@novoconstruction.com'),
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
