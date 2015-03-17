@@ -1,7 +1,7 @@
 import logging
 
-from braces.views import JsonRequestResponseMixin, LoginRequiredMixin, AjaxResponseMixin
-from django.views.generic import DetailView, View
+from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
+from django.views.generic import DetailView
 from django.views.generic.edit import CreateView
 
 from . import forms, models
