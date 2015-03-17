@@ -8,7 +8,6 @@ MM.EntryPickCollection = Backbone.Collection.extend({
   url: 'ajax/'
 });
 
-
 MM.EntryPickView = Backbone.View.extend({
   events: {
     'click': 'click',
@@ -45,7 +44,6 @@ MM.EntryPickCollectionView = Backbone.View.extend({
       view.$el.empty();
     });
     this.addAll();
-    console.log('render collection', this.collection);
     return this;
 
   },
@@ -59,7 +57,6 @@ MM.EntryPickCollectionView = Backbone.View.extend({
     this.collection.forEach(this.addOne, this);
   }
 });
-
 
 MM.App = Backbone.Router.extend({
   initialize: function () {
