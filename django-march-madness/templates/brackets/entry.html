@@ -5,16 +5,9 @@
 {% block content %}
   <div>
     <div class="bracket-header">
-      <div class="affix-top">
-        <div class="bracket-nav btn-toolbar">
-          <div class="btn-group">
-            <button class="btn btn-default" disabled="true" type="button"><span class="glyphicon glyphicon-ban-circle"></span></button>
-          </div>
-        </div>
-
-        <div class="bracket-enter" title="2015-03-19T16:15:00.000Z">
-          <button class="btn btn-novo btn-block" disabled type="button"><span>Brackets lock</span> <span>3 days from now</span></button>
-        </div>
+      <div class="bracket-enter">
+        <button class="btn btn-novo" disabled type="button"><span>Brackets lock in</span> <span id="locked"></span></button>
+        <button class="btn btn-novo" disabled type="button"><span><strong>Bracket:</strong> {{ entry.name }}</span></button>
       </div>
     </div>
 
@@ -794,7 +787,12 @@
 
 {% block extra_javascript %}
 {{ block.super }}
+<script src="/static/js/countdown.min.js" type="text/javascript"></script>
 <script>
+var tourney = new Date(Date.UTC(2015, 02, 19, 16, 25));
+var time = countdown(null, tourney, countdown.DAYS|countdown.HOURS|countdown.MINUTES).toString();
+$('#locked').html(time);
+
 $('.team.pickable').click(function() {
   var game = $(this).parent().parent().data('game');
   var pick = $(this).data('id')

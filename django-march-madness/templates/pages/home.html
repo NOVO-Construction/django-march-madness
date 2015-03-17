@@ -1,15 +1,1 @@
 {% extends "__base.html" %}
-
-{% block content %}
-<div class="bracket-enter" title="2015-03-19T16:15:00.000Z">
-  <button class="btn btn-novo btn-block" disabled type="button"><span>Brackets lock</span> <span id="locked"></span></button>
-</div>
-{% endblock content %}
-
-{% block extra_js %}
-<script src="/static/js/countdown.min.js" type="text/javascript"></script>
-<script>
-var time = countdown(null, 1426785900000, countdown.DAYS|countdown.HOURS|countdown.MINUTES).toString();
-$('#locked').html(time);
-</script>
-{% endblock extra_js %}

@@ -442,7 +442,7 @@
   border-bottom:1px solid #dedede
 }
 
-.bracket-header .bracket-nav,.bracket-header .bracket-enter,.bracket-header .bracket-progress {
+.bracket-header .bracket-nav,.bracket-header .bracket-enter,.bracket-header .bracket-name, {
   float:left
 }
 
