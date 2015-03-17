@@ -18,4 +18,10 @@ class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, TemplateView)
 
     def post(self, request, *args, **kwargs):
         log.debug(self.request_json)
-        return self.render_json_response({'message': ('Your pick has been made')})
+        try:
+            game = self.request_json['game']
+        except KeyError:
+            return self.render_bad_request_response({'message': ('Your pick has been made')})
+        message = 'Created pick for user {} game {}'.format(request.user, game)
+        log.debug(message)
+        return self.render_json_response({'message': message})
