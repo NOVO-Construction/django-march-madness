@@ -49,9 +49,7 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
     def get_picks(self):
         entry = self.object
         picks = entry.entrypick_set.select_related('game', 'pick')
-        if not picks:
-            return None
-        return picks.values()
+        return [pick.as_dict() for pick in picks]
 
     def get(self, request, *args, **kwargs):
         super(EnterPicksAjaxView, self).get(request, *args, **kwargs)
@@ -66,7 +64,5 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
             pick = self.request_json['pick']
         except KeyError:
             return self.render_bad_request_response({'message': ('must supply game and pick')})
-        self.object.create_pick(models.Game.objects.get(pk=game), models.Pick.objects.get(pk=pick))
-        message = 'Created pick for user {} game {} pick {}'.format(request.user, game, pick)
-        log.debug(message)
+        self.object.create_pick(models.Game.objects.get(pk=game), models.Bracket.objects.get(pk=pick))
         return self.render_json_response(self.get_picks())
