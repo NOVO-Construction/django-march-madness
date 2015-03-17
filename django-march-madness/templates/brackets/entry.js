@@ -63,10 +63,22 @@ MM.EntryPickCollectionView = Backbone.View.extend({
 
 MM.App = Backbone.Router.extend({
   initialize: function () {
+    var that = this;
     this.entryPickCollection = new MM.EntryPickCollection();
     this.entryPickCollection.fetch({reset: true});
 
     this.entryPickCollectionView = new MM.EntryPickCollectionView({collection: this.entryPickCollection});
+    $('[data-round="1"] .team.pickable').click(function() {
+      var game = $(this).parent().parent().data('game');
+      var pick = $(this).data('id');
+      var data = JSON.stringify({
+        pick: pick,
+        game: game
+      });
+      $.post('ajax/', data, function(data) {
+        that.entryPickCollection.fetch({reset: true});
+      });
+    });
   }
 });
 MM.app = new MM.App();
