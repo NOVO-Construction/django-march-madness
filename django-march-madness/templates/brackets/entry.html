@@ -1,6 +1,6 @@
-{% extends "__base.html" %} 
+{% extends "__base.html" %}
 
-{% block title %}Make Your Picks{% endblock %} 
+{% block title %}Make Your Picks{% endblock %}
 
 {% block content %}
   <div>
@@ -792,3 +792,9 @@
     </div>
   </div>
 {% endblock content %}
+
+{% block extra_javascript %}
+{{ block.super }}
+<script>
+</script>
+{% endblock extra_javascript %}
