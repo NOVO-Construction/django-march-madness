@@ -1,8 +1,10 @@
+from braces.views import LoginRequiredMixin
 from django.views.generic.base import TemplateView
+
 from .models import Bracket
 
 
-class EnterPicksView(TemplateView):
+class EnterPicksView(LoginRequiredMixin, TemplateView):
     template_name = 'brackets/entry.html'
 
     def get_context_data(self, **kwargs):
