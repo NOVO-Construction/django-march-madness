@@ -12,3 +12,11 @@ class EntryForm(forms.ModelForm):
     class Meta:
         model = models.Entry
         fields = ('name',)
+
+class TieBreakForm(forms.ModelForm):
+    helper = FormHelper()
+    helper.form_tag = False
+
+    class Meta:
+        model = models.Entry
+        fields = ('tie_break',)
