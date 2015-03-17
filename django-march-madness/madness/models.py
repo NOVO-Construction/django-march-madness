@@ -56,6 +56,9 @@ class Entry(models.Model):
     tie_break = models.IntegerField(max_length=3, blank=False)
 
     def create_pick(self, game, pick):
+        old_pick = EntryPick.objects.filter(entry=self, game=game).first()
+        if old_pick and old_pick.pick and old_pick.pick != pick:
+            EntryPick.objects.filter(entry=self, game__game_number__gt=game.game_number, pick=old_pick.pick).delete()
         obj, created = EntryPick.objects.update_or_create(entry=self, game=game, defaults={'pick': pick})
         return obj
 
