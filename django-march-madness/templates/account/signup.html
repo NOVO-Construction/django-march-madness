@@ -15,16 +15,6 @@
 
 	<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
 	{% csrf_token %}
-	<div class="row">
-		<div id="div_id_first_name" class="form-group col-sm-6">
-			<label for="id_first_name" class="control-label  requiredField">First Name<span class="asteriskField">*</span></label>
-			<div class="controls "><input class="textinput textInput form-control" id="id_first_name" name="first_name" placeholder="First Name" type="text"></div>
-		</div>
-		<div id="div_id_last_name" class="form-group col-sm-6">
-			<label for="id_last_name" class="control-label  requiredField">Last Name<span class="asteriskField">*</span></label>
-			<div class="controls "><input class="textinput textInput form-control" id="id_last_name" name="last_name" placeholder="Last Name" type="text"></div>
-		</div>
-	</div>
 	{{ form|crispy }}
 	{% if redirect_field_value %}
 	<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
@@ -39,6 +29,4 @@
 		<i class="fa fa-facebook"></i> Signup with Facebook
 	</a>
 </div>
-
-
 {% endblock content %}
