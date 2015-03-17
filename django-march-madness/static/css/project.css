@@ -32,3 +32,13 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+.btn-novo {
+  color: #000;
+  background-color: #F0B34D;
+  border-color: #F0B34D;
+}
+
+.color-novo {
+  color: #F0B34D !important;
+}
