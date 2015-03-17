@@ -62,6 +62,9 @@ footer {
   background-color: #2C3742;
 }
 
+.navbar {
+  border-radius: 0;
+}
 .navbar a {
   color: #C1B691;
 }
