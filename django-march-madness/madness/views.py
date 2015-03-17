@@ -1,7 +1,7 @@
 import logging
 
-from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
-from django.views.generic import DetailView
+from braces.views import JsonRequestResponseMixin, LoginRequiredMixin, AjaxResponseMixin
+from django.views.generic import DetailView, View
 from django.views.generic.edit import CreateView
 
 from . import forms, models
@@ -26,7 +26,7 @@ class CreateEntryView(LoginRequiredMixin, CreateView):
         return super(CreateEntryView, self).form_valid(form)
 
 
-class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, DetailView):
+class EnterPicksView(LoginRequiredMixin, DetailView):
     context_object_name = 'entry'
     model = models.Entry
     template_name = 'brackets/entry.html'
@@ -39,7 +39,19 @@ class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, DetailView):
     def get_queryset(self):
         return models.Entry.objects.filter(user=self.request.user)
 
-    def post(self, request, *args, **kwargs):
+
+class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, AjaxResponseMixin, DetailView):
+    # require_json = True
+    model = models.Entry
+
+    def get_queryset(self):
+        return models.Entry.objects.filter(user=self.request.user)
+
+    def get_ajax(self, request, *args, **kwargs):
+        log.debug(self.request_json)
+        return self.render_json_response({'message': 'fpp'})
+
+    def post_ajax(self, request, *args, **kwargs):
         log.debug(self.request_json)
         try:
             game = self.request_json['game']
