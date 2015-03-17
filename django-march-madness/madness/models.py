@@ -43,8 +43,8 @@ class Game(models.Model):
     game_number = models.IntegerField(db_index=True)
     team_1 = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
     team_2 = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
-    team_1_score = models.IntegerField(max_length=4, blank=True)
-    team_2_score = models.IntegerField(max_length=4, blank=True)
+    team_1_score = models.IntegerField(max_length=4, default=0)
+    team_2_score = models.IntegerField(max_length=4, default=0)
 
 
 class Entry(models.Model):
