@@ -45,9 +45,9 @@ class Game(models.Model):
     team_2 = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
     team_1_score = models.IntegerField(max_length=4, default=0)
     team_2_score = models.IntegerField(max_length=4, default=0)
-		
+
     def __unicode__(self):
-			return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
+        return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
 
 
 class Entry(models.Model):
@@ -56,7 +56,8 @@ class Entry(models.Model):
     tie_break = models.IntegerField(max_length=3, blank=False)
 
     def create_pick(self, game, pick):
-        EntryPick.objects.update_or_create(entry=self, game=game, defaults={'pick': pick})
+        obj, created = EntryPick.objects.update_or_create(entry=self, game=game, defaults={'pick': pick})
+        return obj
 
     def get_absolute_url(self):
         return reverse_lazy('madness:entry_picks', args=(self.pk,))
@@ -66,6 +67,18 @@ class EntryPick(TimeStampedModel):
     entry = models.ForeignKey(Entry)
     game = models.ForeignKey(Game)
     pick = models.ForeignKey(Bracket)
+
+    def as_dict(self):
+        return {
+            'pk': self.pk,
+            'game_pk': self.game.pk,
+            'game_number': self.game.game_number,
+            'pick_pk': self.pick.pk,
+            'pick_team_pk': self.pick.team.pk,
+            'pick_team_name': self.pick.team.name,
+            'pick_team_mascot': self.pick.team.mascot,
+            'pick_team_abbreviation': self.pick.team.abbreviation,
+        }
 
 
 class Standing(models.Model):
