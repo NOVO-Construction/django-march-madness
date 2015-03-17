@@ -123,11 +123,11 @@
 
 .bracket .team.pickable {
   cursor:pointer;
-  color:#dd4814
+  color:#000;
 }
 
 .bracket .team.pickable:hover,.bracket .team.pickable.selected {
-  color:#97310e
+  color:#F0B34D;
 }
 
 .bracket .team.correct,.bracket .team.incorrect {
