@@ -16,6 +16,14 @@
   </div>
 
 {% if object == request.user %}
+<div class="row">
+  <div class="col-sm-12">
+    <h2>My Brackets</h2>
+    {% if not brackets %}
+      <p>You have no brackets, <a href="{% url 'madness:create_entry' %}">enter one here</a>.</p>
+    {% endif %}
+  </div>
+</div>
 <!-- Action buttons -->
 <div class="row">
 

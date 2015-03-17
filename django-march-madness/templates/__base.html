@@ -30,9 +30,10 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="/"></a>
         <ul class="nav navbar-nav">
-          <li><a href="{% url 'about' %}">Rules</a></li>
+          <li><a href="{% url 'madness:rules' %}">Rules</a></li>
 
           {% if request.user.is_authenticated %}
+            <li><a href="{% url 'madness:create_entry' %}">New Bracket</a></li>
             <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
             <li><a href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
           {% else %}
@@ -69,7 +70,7 @@
     {% block extra_javascript %}
     {% endblock extra_javascript %}
     <footer>
-      <p class="text-center">&copy;2015 NOVO Construction, Inc. Built in 24 hours by <a href="mailto:cstoner@novoconstruction.com">Colin</a> and <A href="mailto:skuehn@novoconstruction.com">Sam</a>. Open Sourced on <a href="https://github.com/NOVO-Construction/django-march-madness">Github</a>.</p>
+      <p class="text-center">Built in 24 hours by <a href="mailto:cstoner@novoconstruction.com">Colin</a> and <A href="mailto:skuehn@novoconstruction.com">Sam</a>. Open Sourced on <a href="https://github.com/NOVO-Construction/django-march-madness">Github</a>.<br>&copy;2015 NOVO Construction, Inc.</p>
     </footer>
   </body>
 </html>

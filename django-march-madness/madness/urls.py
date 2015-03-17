@@ -4,5 +4,7 @@ from . import views
 
 urlpatterns = patterns(
     'madness',
-    url(r'^bracket/$', views.EnterPicksView.as_view(), name='entry_picks'),
+    url(r'^bracket/create/$', views.CreateEntryView.as_view(), name='create_entry'),
+    url(r'^bracket/create/(?P<pk>\d+)/$', views.EnterPicksView.as_view(), name='entry_picks'),
+    url(r'^rules/$', views.RulesView.as_view(), name='rules'),
 )
