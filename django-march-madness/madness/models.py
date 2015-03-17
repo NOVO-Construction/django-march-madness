@@ -1,5 +1,6 @@
 from django.core.urlresolvers import reverse_lazy
 from django.db import models
+from model_utils.models import TimeStampedModel
 
 from users.models import User
 
@@ -39,13 +40,13 @@ class Bracket(models.Model):
 
 
 class Game(models.Model):
-		game_number = models.IntegerField(max_length=2)
-		team_1 = models.ForeignKey(Bracket, related_name='+', blank=True)
-		team_2 = models.ForeignKey(Bracket, related_name='+', blank=True)
-		team_1_score = models.IntegerField(max_length=4, blank=True)
-		team_2_score = models.IntegerField(max_length=4, blank=True)
-
-		def __unicode__(self):
+    game_number = models.IntegerField(db_index=True)
+    team_1 = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
+    team_2 = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
+    team_1_score = models.IntegerField(max_length=4, blank=True)
+    team_2_score = models.IntegerField(max_length=4, blank=True)
+		
+    def __unicode__(self):
 			return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
 
 
@@ -61,10 +62,10 @@ class Entry(models.Model):
         return reverse_lazy('madness:entry_picks', args=(self.pk,))
 
 
-class EntryPick(models.Model):
+class EntryPick(TimeStampedModel):
     entry = models.ForeignKey(Entry)
     game = models.ForeignKey(Game)
-    pick = models.ForeignKey(Team)
+    pick = models.ForeignKey(Bracket)
 
 
 class Standing(models.Model):
