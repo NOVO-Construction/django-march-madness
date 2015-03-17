@@ -1,5 +1,10 @@
-from django.shortcuts import render_to_response
+from django.views.generic.base import TemplateView
+from .models import Bracket
 
-# Create your views here.
-def EntryPicks(request):
-	return render_to_response('brackets/entry.html')
+class EnterPicksView(TemplateView):
+	template_name = 'brackets/entry.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(EnterPicksView, self).get_context_data(**kwargs)
+		context['bracket'] = Bracket.objects.filter(year=2015)
+		return context
