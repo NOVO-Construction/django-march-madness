@@ -1,31 +1,43 @@
 import logging
 
 from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
-from django.views.generic.base import TemplateView
-from django.views.generic.edit import FormView
+from django.views.generic import DetailView
+from django.views.generic.edit import CreateView
 
-from .models import Bracket
-from .forms import EntryForm
+from . import forms, models
 
 log = logging.getLogger(__name__)
 
 
-class CreateEntryView(LoginRequiredMixin, FormView):
-	template_name = 'brackets/create.html'
-	form_class = EntryForm
+class CreateEntryView(LoginRequiredMixin, CreateView):
+    template_name = 'brackets/create.html'
+    form_class = forms.EntryForm
+    model = models.Entry
 
-	def get_context_data(self, **kwargs):
-		context = super(CreateEntryView, self).get_context_data(**kwargs)
-		return context
+    def get_initial(self):
+        initial = super(CreateEntryView, self).get_initial()
+        initial.update(self.request.GET.dict())
+        return initial
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.tie_break = 0
+        self.object = form.save()
+        return super(CreateEntryView, self).form_valid(form)
 
 
-class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, TemplateView):
+class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, DetailView):
+    context_object_name = 'entry'
+    model = models.Entry
     template_name = 'brackets/entry.html'
 
-    def get_context_data(self, pk, **kwargs):
+    def get_context_data(self, **kwargs):
         context = super(EnterPicksView, self).get_context_data(**kwargs)
-        context['bracket'] = Bracket.objects.filter(year=2015)
+        context['bracket'] = models.Bracket.objects.filter(year=2015)
         return context
+
+    def get_queryset(self):
+        return models.Entry.objects.filter(user=self.request.user)
 
     def post(self, request, *args, **kwargs):
         log.debug(self.request_json)
@@ -36,11 +48,3 @@ class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, TemplateView)
         message = 'Created pick for user {} game {}'.format(request.user, game)
         log.debug(message)
         return self.render_json_response({'message': message})
-
-
-class RulesView(TemplateView):
-    template_name = 'pages/rules.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(RulesView, self).get_context_data(**kwargs)
-        return context
