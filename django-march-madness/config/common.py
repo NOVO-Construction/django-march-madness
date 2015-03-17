@@ -100,7 +100,8 @@ class Common(Configuration):
     # MANAGER CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
     ADMINS = (
-        ("""Colin Stoner""", 'cstoner@novoconstruction.com'),
+        ('Colin Stoner', 'cstoner@novoconstruction.com'),
+        ('Sam Kuehn', 'skuehn@novoconstruction.com'),
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
