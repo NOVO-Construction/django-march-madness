@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
+from crispy_forms.helper import FormHelper
 from django import forms
 
-from .models import Entry
+from . import models
 
 
 class EntryForm(forms.ModelForm):
+    helper = FormHelper()
+    helper.form_tag = False
 
     class Meta:
-        # Set this form to use the User model.
-        model = Entry
-
-        # Constrain the UserForm to just these fields.
-        fields = ("name",)
+        model = models.Entry
+        fields = ('name',)

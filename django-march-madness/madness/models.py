@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
 from users.models import User
@@ -48,6 +49,9 @@ class Entry(models.Model):
     user = models.ForeignKey(User)
     name = models.CharField(max_length=250, blank=False)
     tie_break = models.IntegerField(max_length=3, blank=False)
+
+    def get_absolute_url(self):
+        return reverse_lazy('madness:entry_picks', args=(self.pk,))
 
 
 class EntryPick(models.Model):
