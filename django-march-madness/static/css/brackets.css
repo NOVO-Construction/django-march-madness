@@ -14,7 +14,7 @@
   right:23%;
   margin:0;
   text-transform: uppercase;
-  color: #F0B34D;
+  color: #FFB51F;
 }
 
 @media(max-width:767px) {
@@ -128,7 +128,7 @@
 }
 
 .bracket .team.pickable:hover,.bracket .team.pickable.selected {
-  color:#F0B34D;
+  color:#FFB51F;
 }
 
 .bracket .team.correct,.bracket .team.incorrect {
@@ -557,4 +557,9 @@
 
 .score-card a.twitter img {
   width:33px
+}
+
+#champion {
+  font-size: 24px;
+  height: 48px;
 }
