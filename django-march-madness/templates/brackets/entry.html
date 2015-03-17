@@ -7,7 +7,7 @@
     <div class="bracket-header">
       <div class="bracket-enter">
         <button class="btn btn-novo" id="countdown" disabled type="button"><span>Brackets lock in</span> <span id="locked"></span></button>
-        <button class="btn btn-primary" disabled type="button"><span><strong>Bracket:</strong> {{ entry.name }}</span></button>
+        <button class="btn btn-primary" disabled type="button"><span>Bracket: {{ entry.name }}</span></button>
       </div>
     </div>
 
@@ -776,6 +776,7 @@
                     <span class="color-novo" id="w63"></span>
                   </li>
                 </ul>
+                <div>Total Points of Final<input class="form-control input-sm" type="number" value="{{ entry.tie_break }}" name="tie_break"/></div>
               </div>
             </div>
           </div>
