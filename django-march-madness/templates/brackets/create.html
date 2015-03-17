@@ -1,0 +1,14 @@
+{% extends "__base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Name Your Bracket{% endblock %}
+
+{% block content %}
+<div class="container col-sm-6 col-sm-offset-3">
+	<h2>Name Your Bracket</h2>
+	<form>
+	{{ form|crispy }}
+	<button class="btn" type="submit">Make Your Picks &raquo;</button>
+	</form>
+</div>
+{% endblock content %}
