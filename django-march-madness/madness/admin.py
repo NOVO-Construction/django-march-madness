@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from madness.models import Bracket, Entry, EntryPick, Game, Region, Team
 
 
