@@ -1,6 +1,6 @@
-{% extends "__base.html" %} 
+{% extends "__base.html" %}
 
-{% block title %}Make Your Picks{% endblock %} 
+{% block title %}Make Your Picks{% endblock %}
 
 {% block content %}
   <div>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="bracket-enter" title="2015-03-19T16:15:00.000Z">
-          <button class="btn btn-danger btn-block" disabled type="button"><span>Brackets lock</span> <span>3 days from now</span></button>
+          <button class="btn btn-novo btn-block" disabled type="button"><span>Brackets lock</span> <span>3 days from now</span></button>
         </div>
       </div>
     </div>
@@ -28,167 +28,167 @@
           <div class="rounds">
             <div class="rounds-scroll">
               <div class="round">
-                <ul class="matchup" game-id="1">
+                <ul class="matchup" data-game="1">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.0.pk }}">{{ bracket.0 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.0.pk }}">{{ bracket.0 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.1.pk }}">{{ bracket.1 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup" game-id="2">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.2.pk }}">{{ bracket.2 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.3.pk }}">{{ bracket.3 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.1.pk }}">{{ bracket.1 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup" game-id="3">
+                <ul class="matchup" data-game="2">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.4.pk }}">{{ bracket.4 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.2.pk }}">{{ bracket.2 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.5.pk }}">{{ bracket.5 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup" game-id="4">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.6.pk }}">{{ bracket.6 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.7.pk }}">{{ bracket.7 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.3.pk }}">{{ bracket.3 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup" game-id="5">
+                <ul class="matchup" data-game="3">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.8.pk }}">{{ bracket.8 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.4.pk }}">{{ bracket.4 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.9.pk }}">{{ bracket.9 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup" game-id="6">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.10.pk }}">{{ bracket.10 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.11.pk }}">{{ bracket.11 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.5.pk }}">{{ bracket.5 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup" game-id="7">
+                <ul class="matchup" data-game="4">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.12.pk }}">{{ bracket.12 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.6.pk }}">{{ bracket.6 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.13.pk }}">{{ bracket.13 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup" game-id="8">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.14.pk }}">{{ bracket.14 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.15.pk }}">{{ bracket.15 }}</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="round">
-                <ul class="matchup" game-id="33">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.7.pk }}">{{ bracket.7 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup" game-id="34">
+                <ul class="matchup" data-game="5">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.8.pk }}">{{ bracket.8 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
-                  </li>
-                </ul>
-
-                <ul class="matchup" game-id="35">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.9.pk }}">{{ bracket.9 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup" game-id="36">
+                <ul class="matchup" data-game="6">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.10.pk }}">{{ bracket.10 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.11.pk }}">{{ bracket.11 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="7">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.12.pk }}">{{ bracket.12 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.13.pk }}">{{ bracket.13 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="8">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.14.pk }}">{{ bracket.14 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.15.pk }}">{{ bracket.15 }}</a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup" game-id="49">
+                <ul class="matchup" data-game="33">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w1" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w2" data-id=""></a>
                   </li>
                 </ul>
 
-                <ul class="matchup" game-id="50">
+                <ul class="matchup" data-game="34">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w3" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w4" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="35">
+                  <li>
+                    <a class="team pickable" id="w5" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w6" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="36">
+                  <li>
+                    <a class="team pickable" id="w7" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w8" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup" game-id="57">
+                <ul class="matchup" data-game="49">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w33" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w34" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="50">
+                  <li>
+                    <a class="team pickable" id="w35" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w36" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup" game-id="61">
+                <ul class="matchup" data-game="57">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w49" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w50" data-id=""></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="round">
+                <ul class="matchup" data-game="61" id="ff1">
+                  <li>
+                    <a class="team pickable" id="w57" data-id=""></a>
                   </li>
                 </ul>
               </div>
@@ -207,167 +207,167 @@
           <div class="rounds">
             <div class="rounds-scroll">
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="9">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.16.pk }}">{{ bracket.16 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.16.pk }}">{{ bracket.16 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.17.pk }}">{{ bracket.17 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.18.pk }}">{{ bracket.18 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.19.pk }}">{{ bracket.19 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.17.pk }}">{{ bracket.17 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="10">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.20.pk }}">{{ bracket.20 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.18.pk }}">{{ bracket.18 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.21.pk }}">{{ bracket.21 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.22.pk }}">{{ bracket.22 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.23.pk }}">{{ bracket.23 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.19.pk }}">{{ bracket.19 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="11">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.24.pk }}">{{ bracket.24 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.20.pk }}">{{ bracket.20 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.25.pk }}">{{ bracket.25 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.26.pk }}">{{ bracket.26 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.27.pk }}">{{ bracket.27 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.21.pk }}">{{ bracket.21 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="12">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.28.pk }}">{{ bracket.28 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.22.pk }}">{{ bracket.22 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.29.pk }}">{{ bracket.29 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.30.pk }}">{{ bracket.30 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.31.pk }}">{{ bracket.31 }}</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="round">
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.23.pk }}">{{ bracket.23 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="13">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.24.pk }}">{{ bracket.24 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.25.pk }}">{{ bracket.25 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="14">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.26.pk }}">{{ bracket.26 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.27.pk }}">{{ bracket.27 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="15">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.28.pk }}">{{ bracket.28 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.29.pk }}">{{ bracket.29 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="16">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.30.pk }}">{{ bracket.30 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.31.pk }}">{{ bracket.31 }}</a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="37">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w9" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w10" data-id=""></a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="38">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w11" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w12" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="39">
+                  <li>
+                    <a class="team pickable" id="w13" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w14" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="40">
+                  <li>
+                    <a class="team pickable" id="w15" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w16" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="51">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w37" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w38" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="52">
+                  <li>
+                    <a class="team pickable" id="w39" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w40" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="58">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w51" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w52" data-id=""></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="round">
+                <ul class="matchup" data-game="61" id="ff2">
+                  <li>
+                    <a class="team pickable" id="w58" data-id=""></a>
                   </li>
                 </ul>
               </div>
@@ -388,167 +388,167 @@
           <div class="rounds">
             <div class="rounds-scroll">
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="17">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.32.pk }}">{{ bracket.32 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.32.pk }}">{{ bracket.32 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.33.pk }}">{{ bracket.33 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.34.pk }}">{{ bracket.34 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.35.pk }}">{{ bracket.35 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.33.pk }}">{{ bracket.33 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="18">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.36.pk }}">{{ bracket.36 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.34.pk }}">{{ bracket.34 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.37.pk }}">{{ bracket.37 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.38.pk }}">{{ bracket.38 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.39.pk }}">{{ bracket.39 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.35.pk }}">{{ bracket.35 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="19">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.40.pk }}">{{ bracket.40 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.36.pk }}">{{ bracket.36 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.41.pk }}">{{ bracket.41 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.42.pk }}">{{ bracket.42 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.43.pk }}">{{ bracket.43 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.37.pk }}">{{ bracket.37 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="20">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.44.pk }}">{{ bracket.44 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.38.pk }}">{{ bracket.38 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.45.pk }}">{{ bracket.45 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.46.pk }}">{{ bracket.46 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.47.pk }}">{{ bracket.47 }}</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="round">
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.39.pk }}">{{ bracket.39 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="21">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.40.pk }}">{{ bracket.40 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.41.pk }}">{{ bracket.41 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="22">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.42.pk }}">{{ bracket.42 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.43.pk }}">{{ bracket.43 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="23">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.44.pk }}">{{ bracket.44 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.45.pk }}">{{ bracket.45 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="24">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.46.pk }}">{{ bracket.46 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.47.pk }}">{{ bracket.47 }}</a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="41">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w17" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w18" data-id=""></a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="42">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w19" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w20" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="43">
+                  <li>
+                    <a class="team pickable" id="w21" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w22" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="44">
+                  <li>
+                    <a class="team pickable" id="w23" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w24" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="53">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w41" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w42" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="54">
+                  <li>
+                    <a class="team pickable" id="w43" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w44" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="59">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w53" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w54" data-id=""></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="round">
+                <ul class="matchup" data-game="62">
+                  <li>
+                    <a class="team pickable" id="w59" data-id=""></a>
                   </li>
                 </ul>
               </div>
@@ -567,167 +567,167 @@
           <div class="rounds">
             <div class="rounds-scroll">
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="25">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.48.pk }}">{{ bracket.48 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.48.pk }}">{{ bracket.48 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.49.pk }}">{{ bracket.49 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.50.pk }}">{{ bracket.50 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.51.pk }}">{{ bracket.51 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.49.pk }}">{{ bracket.49 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="26">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.52.pk }}">{{ bracket.52 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.50.pk }}">{{ bracket.50 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.53.pk }}">{{ bracket.53 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.54.pk }}">{{ bracket.54 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.55.pk }}">{{ bracket.55 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.51.pk }}">{{ bracket.51 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="27">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.56.pk }}">{{ bracket.56 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.52.pk }}">{{ bracket.52 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.57.pk }}">{{ bracket.57 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.58.pk }}">{{ bracket.58 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.59.pk }}">{{ bracket.59 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.53.pk }}">{{ bracket.53 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="28">
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.60.pk }}">{{ bracket.60 }}</a>
+                    <a class="team pickable" data-id="{{ bracket.54.pk }}">{{ bracket.54 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" data-name="{{ bracket.61.pk }}">{{ bracket.61 }}</a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.62.pk }}">{{ bracket.62 }}</a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" data-name="{{ bracket.63.pk }}">{{ bracket.63 }}</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="round">
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.55.pk }}">{{ bracket.55 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="29">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.56.pk }}">{{ bracket.56 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.57.pk }}">{{ bracket.57 }}</a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="30">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.58.pk }}">{{ bracket.58 }}</a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" data-id="{{ bracket.59.pk }}">{{ bracket.59 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="31">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.60.pk }}">{{ bracket.60 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.61.pk }}">{{ bracket.61 }}</a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="32">
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.62.pk }}">{{ bracket.62 }}</a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" data-id="{{ bracket.63.pk }}">{{ bracket.63 }}</a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="45">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w25" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w26" data-id=""></a>
                   </li>
                 </ul>
 
-                <ul class="matchup">
+                <ul class="matchup" data-game="46">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w27" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w28" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="47">
+                  <li>
+                    <a class="team pickable" id="w29"></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w30" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="48">
+                  <li>
+                    <a class="team pickable" id="w31" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w32" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="55">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w45" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w46" data-id=""></a>
+                  </li>
+                </ul>
+
+                <ul class="matchup" data-game="56">
+                  <li>
+                    <a class="team pickable" id="w47" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w48" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="60">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w55" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w56" data-id=""></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="round">
+                <ul class="matchup" data-game="62">
+                  <li>
+                    <a class="team pickable" id="w60" data-id=""></a>
                   </li>
                 </ul>
               </div>
@@ -740,48 +740,47 @@
 
       <div class="col-md-12 final-region-container">
         <section class="region final-region" data-id="FF">
-          <h2 class="region-name">Final Four (0/3)</h2>
 
           <div class="rounds">
             <div class="rounds-scroll">
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="61">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="xff1" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
-                  </li>
-                </ul>
-
-                <ul class="matchup">
-                  <li>
-                    <a class="team pickable" ></a>
-                  </li>
-
-                  <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="xff2" data-id=""></a>
                   </li>
                 </ul>
-              </div>
 
-              <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="62">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="xff3" data-id=""></a>
                   </li>
 
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="xff4" data-id=""></a>
                   </li>
                 </ul>
               </div>
 
               <div class="round">
-                <ul class="matchup">
+                <ul class="matchup" data-game="63">
                   <li>
-                    <a class="team pickable" ></a>
+                    <a class="team pickable" id="w61" data-id=""></a>
+                  </li>
+
+                  <li>
+                    <a class="team pickable" id="w62" data-id=""></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="round">
+                <ul class="matchup" id="champion">
+                  <li>
+                    <span class="color-novo" id="w63"></span>
                   </li>
                 </ul>
               </div>
@@ -792,3 +791,39 @@
     </div>
   </div>
 {% endblock content %}
+
+{% block extra_javascript %}
+{{ block.super }}
+<script>
+$('.team.pickable').click(function() {
+  var game = $(this).parent().parent().data('game');
+  var pick = $(this).data('id')
+  var data = JSON.stringify({
+    pick: pick,
+    game: game,
+    entry: 1
+  });
+  console.log(data);
+  $.post('', data, function(data) {
+    console.log(data);
+  });
+  w = "#w" + game;
+  $(w).html($(this).html());
+  $(w).data("id", $(this).data("id"));
+  if (game == "57") {
+    $("#xff1").html($(this).html());
+    $("#xff1").data("id", $(this).data("id"));
+  } else if (game == "58"){
+    $("#xff2").html($(this).html());
+    $("#xff2").data("id", $(this).data("id"));
+  } else if (game == "58"){
+    $("#xff3").html($(this).html());
+    $("#xff3").data("id", $(this).data("id"));
+  } else if (game == "58"){
+    $("#xff4").html($(this).html());
+    $("#xff4").data("id", $(this).data("id"));
+  }
+});
+
+</script>
+{% endblock extra_javascript %}

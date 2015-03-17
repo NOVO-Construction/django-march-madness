@@ -28,10 +28,9 @@
 
     <div class="header navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">django-march-madness</a>
+        <a class="navbar-brand" href="/"></a>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'about' %}">Rules</a></li>
 
           {% if request.user.is_authenticated %}
             <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
@@ -61,16 +60,16 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
-      <!-- Latest JQuery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-      <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-      <!-- Your stuff: Third-party javascript libraries go here -->
-
-      <!-- place project specific Javascript in this file -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
       <script src="{% static 'js/project.js' %}"></script>
     {% endblock javascript %}
+
+    {% block extra_javascript %}
+    {% endblock extra_javascript %}
+    <footer>
+      <p class="text-center">&copy;2015 NOVO Construction, Inc. Built in 24 hours by <a href="mailto:cstoner@novoconstruction.com">Colin</a> and <A href="mailto:skuehn@novoconstruction.com">Sam</a>. Open Sourced on <a href="https://github.com/NOVO-Construction/django-march-madness">Github</a>.</p>
+    </footer>
   </body>
 </html>
