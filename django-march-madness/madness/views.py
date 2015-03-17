@@ -63,8 +63,10 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
         log.debug(self.request_json)
         try:
             game = self.request_json['game']
+            pick = self.request_json['pick']
         except KeyError:
-            return self.render_bad_request_response({'message': ('must supply game and team')})
-        message = 'Created pick for user {} game {}'.format(request.user, game)
+            return self.render_bad_request_response({'message': ('must supply game and pick')})
+        self.object.create_pick(models.Game.objects.get(pk=game), models.Pick.objects.get(pk=pick))
+        message = 'Created pick for user {} game {} pick {}'.format(request.user, game, pick)
         log.debug(message)
         return self.render_json_response(self.get_picks())

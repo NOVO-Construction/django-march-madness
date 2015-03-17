@@ -800,8 +800,7 @@ $('.team.pickable').click(function() {
   var pick = $(this).data('id')
   var data = JSON.stringify({
     pick: pick,
-    game: game,
-    entry: 1
+    game: game
   });
   console.log(data);
   $.post('ajax/', data, function(data) {

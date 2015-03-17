@@ -50,6 +50,9 @@ class Entry(models.Model):
     name = models.CharField(max_length=250, blank=False)
     tie_break = models.IntegerField(max_length=3, blank=False)
 
+    def create_pick(self, game, pick):
+        EntryPick.objects.update_or_create(entry=self, game=game, defaults={'pick': pick})
+
     def get_absolute_url(self):
         return reverse_lazy('madness:entry_picks', args=(self.pk,))
 
