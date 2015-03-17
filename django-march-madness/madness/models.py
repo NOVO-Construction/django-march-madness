@@ -34,7 +34,7 @@ class Bracket(models.Model):
     seed = models.IntegerField(max_length=2, blank=False)
 
     def __unicode__(self):
-		return u'(%s) %s' % (self.seed, self.team.name)
+        return u'(%s) %s' % (self.seed, self.team.name)
 
 
 class Game(models.Model):

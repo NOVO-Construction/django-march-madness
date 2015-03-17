@@ -119,7 +119,7 @@ class Production(Common):
                 'level': 'ERROR',
                 'propagate': False,
             },
-            'django-march-madness': {
+            'madness': {
                 'handlers': ['logfile'],
                 'level': 'INFO',
                 'propagate': False

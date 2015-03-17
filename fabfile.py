@@ -1,6 +1,6 @@
 from os.path import dirname, join, normpath
 
-from fabric.api import cd, env, local, run, sudo, shell_env
+from fabric.api import cd, env, local, run, shell_env, sudo
 from fabric.operations import put
 
 env.hosts = ['madness.novoconstruction.com']
