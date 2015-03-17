@@ -30,7 +30,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="/"></a>
         <ul class="nav navbar-nav">
-          <li><a href="{% url 'madness:rules' %}">Rules</a></li>
+          <li><a href="{% url 'rules' %}">Rules</a></li>
 
           {% if request.user.is_authenticated %}
             <li><a href="{% url 'madness:create_entry' %}">New Bracket</a></li>

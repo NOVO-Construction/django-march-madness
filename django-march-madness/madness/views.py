@@ -36,11 +36,3 @@ class EnterPicksView(LoginRequiredMixin, JsonRequestResponseMixin, TemplateView)
         message = 'Created pick for user {} game {}'.format(request.user, game)
         log.debug(message)
         return self.render_json_response({'message': message})
-
-
-class RulesView(TemplateView):
-    template_name = 'pages/rules.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(RulesView, self).get_context_data(**kwargs)
-        return context
