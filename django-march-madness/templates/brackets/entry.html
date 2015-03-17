@@ -795,38 +795,43 @@ function update() {
 }
 var t = setInterval(update, 1000);
 
-$('.team.pickable').click(function() {
-  var game = $(this).parent().parent().data('game');
-  var pick = $(this).data('id')
-  var data = JSON.stringify({
-    pick: pick,
-    game: game
-  });
-  console.log(data);
-  $.post('ajax/', data, function(data) {
-    console.log(data);
-  });
-  w = "#w" + game;
-  $(w).html($(this).html());
-  $(w).data("id", $(this).data("id"));
-  if (game == "57") {
-    $("#xff1").html($(this).html());
-    $("#xff1").data("id", $(this).data("id"));
-  } else if (game == "58"){
-    $("#xff2").html($(this).html());
-    $("#xff2").data("id", $(this).data("id"));
-  } else if (game == "58"){
-    $("#xff3").html($(this).html());
-    $("#xff3").data("id", $(this).data("id"));
-  } else if (game == "58"){
-    $("#xff4").html($(this).html());
-    $("#xff4").data("id", $(this).data("id"));
-  }
-});
 
-$.get('ajax/', function(data) {
-  console.log(data);
-});
+
+// $('.team.pickable').click(function() {
+//   var game = $(this).parent().parent().data('game');
+//   var pick = $(this).data('id')
+//   var data = JSON.stringify({
+//     pick: pick,
+//     game: game
+//   });
+//   console.log(data);
+//   $.post('ajax/', data, function(data) {
+//     console.log(data);
+//   });
+//   w = "#w" + game;
+//   $(w).html($(this).html());
+//   $(w).data("id", $(this).data("id"));
+//   if (game == "57") {
+//     $("#xff1").html($(this).html());
+//     $("#xff1").data("id", $(this).data("id"));
+//   } else if (game == "58"){
+//     $("#xff2").html($(this).html());
+//     $("#xff2").data("id", $(this).data("id"));
+//   } else if (game == "58"){
+//     $("#xff3").html($(this).html());
+//     $("#xff3").data("id", $(this).data("id"));
+//   } else if (game == "58"){
+//     $("#xff4").html($(this).html());
+//     $("#xff4").data("id", $(this).data("id"));
+//   }
+// });
+
+
+// $.get('ajax/', function(data) {
+//   console.log(data);
+// });
+
+{% include "brackets/entry.js" %}
 
 </script>
 {% endblock extra_javascript %}
