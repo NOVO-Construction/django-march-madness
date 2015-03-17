@@ -42,3 +42,26 @@
 .color-novo {
   color: #FFB51F !important;
 }
+
+form.signup {
+  padding-bottom: 25px;
+}
+
+footer {
+  padding-top: 25px;
+}
+
+.navbar-brand {
+  background-image: url('/static/images/novo_nav_logo_lg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 165px;
+}
+
+.navbar {
+  background-color: #2C3742;
+}
+
+.navbar a {
+  color: #C1B691;
+}

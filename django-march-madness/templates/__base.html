@@ -28,10 +28,9 @@
 
     <div class="header navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">django-march-madness</a>
+        <a class="navbar-brand" href="/"></a>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'about' %}">Rules</a></li>
 
           {% if request.user.is_authenticated %}
             <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
