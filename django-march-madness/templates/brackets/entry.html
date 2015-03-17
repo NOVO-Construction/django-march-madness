@@ -776,7 +776,10 @@
                     <span class="color-novo" id="w63"></span>
                   </li>
                 </ul>
-                <div>Total Points of Final<input class="form-control input-sm" type="number" value="{{ entry.tie_break }}" name="tie_break"/></div>
+                <div class="form-group tie-break">
+                  <label for="tie_break">Total Points of Final</label>
+                  <input type="number" class="form-control input-sm" id="tie_break" placeholder="Total Points" name="tie_break" value="{{ entry.tie_break }}">
+                </div>
               </div>
             </div>
           </div>
