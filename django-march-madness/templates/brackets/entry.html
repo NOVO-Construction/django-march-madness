@@ -796,5 +796,15 @@
 {% block extra_javascript %}
 {{ block.super }}
 <script>
+$('.team.pickable').click(function() {
+  var data = JSON.stringify({
+    game: $(this).data('name')
+  });
+  console.log(data);
+  $.post('', data, function(data) {
+    console.log(data);
+  });
+});
+
 </script>
 {% endblock extra_javascript %}
