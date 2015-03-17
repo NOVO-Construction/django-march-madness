@@ -59,10 +59,11 @@ class Production(Common):
     EMAIL_BACKEND = 'djrill.mail.backends.djrill.DjrillBackend'
     MANDRILL_API_KEY = values.SecretValue(environ_prefix='', environ_name='MANDRILL_API_KEY')
     MANDRILL_SUBACCOUNT = values.Value('march-madness', environ_prefix='', environ_name='MANDRILL_SUBACCOUNT')
+    SERVER_EMAIL = 'noreply@novoconstruction.com'
 
     DEFAULT_FROM_EMAIL = values.Value('django-march-madness <noreply@novoconstruction.com>')
     EMAIL_SUBJECT_PREFIX = values.Value('[django-march-madness] ', environ_name='EMAIL_SUBJECT_PREFIX')
-    EMAIL_USE_TLS = True
+    # EMAIL_USE_TLS = True
     # END EMAIL
 
     # ######### DATABASE CONFIGURATION
