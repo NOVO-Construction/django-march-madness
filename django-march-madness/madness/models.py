@@ -39,10 +39,14 @@ class Bracket(models.Model):
 
 
 class Game(models.Model):
-    team_1 = models.ForeignKey(Bracket, related_name='+')
-    team_2 = models.ForeignKey(Bracket, related_name='+')
-    team_1_score = models.IntegerField(max_length=4, blank=True)
-    team_2_score = models.IntegerField(max_length=4, blank=True)
+		game_number = models.IntegerField(max_length=2)
+		team_1 = models.ForeignKey(Bracket, related_name='+', blank=True)
+		team_2 = models.ForeignKey(Bracket, related_name='+', blank=True)
+		team_1_score = models.IntegerField(max_length=4, blank=True)
+		team_2_score = models.IntegerField(max_length=4, blank=True)
+
+		def __unicode__(self):
+			return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
 
 
 class Entry(models.Model):
