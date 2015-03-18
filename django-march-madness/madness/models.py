@@ -35,7 +35,6 @@ class Bracket(models.Model):
     region = models.ForeignKey(Region)
     seed = models.IntegerField(max_length=2, blank=False)
     is_eliminated = models.BooleanField(default=False)
-    is_paid = models.BooleanField(default=False)
 
     def __unicode__(self):
         return u'(%s) %s' % (self.seed, self.team.name)
@@ -61,6 +60,7 @@ class Entry(models.Model):
     possible = models.IntegerField(default=0)
     position = models.IntegerField(default=0)
     prev_position = models.IntegerField(default=0)
+    is_paid = models.BooleanField(default=False)
 
     def create_pick(self, game, pick):
         old_pick = EntryPick.objects.filter(entry=self, game=game).first()
