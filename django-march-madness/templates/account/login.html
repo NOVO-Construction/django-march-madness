@@ -10,7 +10,7 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-sm-6 col-sm-offset-3">
 
 
       <h2>{% trans "Sign In" %}</h2>
@@ -18,7 +18,7 @@
       {% if socialaccount.providers  %}
       <p>{% blocktrans with site.name as site_name %}Please sign in with one
       of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a> 
-      for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+      for NOVO March Madness account and sign in below:{% endblocktrans %}</p>
 
       <div class="socialaccount_ballot">
 
@@ -26,7 +26,7 @@
           {% include "socialaccount/snippets/provider_list.html" with process="login" %}
         </ul>
 
-        <div class="login-or">{% trans 'or' %}</div>
+        <div class="login-or text-center">{% trans 'or' %}</div>
 
       </div>
 
