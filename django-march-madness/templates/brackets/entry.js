@@ -91,6 +91,10 @@ MM.App = Backbone.Router.extend({
         that.entryPickCollection.fetch({reset: true});
       });
     });
+
+    $.each($('[data-round="1"] .team'), function() {
+      $(this).prop('title', $(this).text());
+    });
   }
 });
 MM.app = new MM.App();
