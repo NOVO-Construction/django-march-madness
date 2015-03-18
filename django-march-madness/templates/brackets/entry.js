@@ -18,6 +18,7 @@ MM.EntryPickView = Backbone.View.extend({
   },
   render: function () {
     this.$el.text(this.model.get('pick_team_display'));
+    this.$el.prop('title', this.model.get('pick_team_display'));
     return this;
   },
   click: function (event) {
@@ -89,6 +90,10 @@ MM.App = Backbone.Router.extend({
       $.post('ajax/', data, function(data) {
         that.entryPickCollection.fetch({reset: true});
       });
+    });
+
+    $.each($('[data-round="1"] .team'), function() {
+      $(this).prop('title', $(this).text());
     });
   }
 });
