@@ -18,6 +18,7 @@ MM.EntryPickView = Backbone.View.extend({
   },
   render: function () {
     this.$el.text(this.model.get('pick_team_display'));
+    this.$el.prop('title', this.model.get('pick_team_display'));
     return this;
   },
   click: function (event) {
