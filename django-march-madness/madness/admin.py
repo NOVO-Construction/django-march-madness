@@ -28,7 +28,7 @@ class GameAdmin(admin.ModelAdmin):
 
 @admin.register(models.Entry)
 class EntryAdmin(RelatedFieldAdmin):
-    list_display = ('name', 'user__first_name', 'user__last_name', 'user__username', 'entrypick_count')
+    list_display = ('name', 'user__first_name', 'user__last_name', 'user__email', 'entrypick_count')
     list_select_related = ('user',)
 
     def queryset(self, request):
