@@ -8,6 +8,25 @@ MM.EntryPickCollection = Backbone.Collection.extend({
   url: 'ajax/'
 });
 
+MM.PickCountView = Backbone.View.extend({
+  el: '#pick-count',
+  initialize: function () {
+    this.listenTo(this.collection, 'reset', this.render);
+  },
+  render: function () {
+    var length = MM.app.entryPickCollection.length;
+    this.$('.count').text(length);
+    if (length < 63) {
+      this.$('.btn').addClass('btn-danger');
+      this.$('.btn').removeClass('btn-success');
+    } else {
+      this.$('.btn').removeClass('btn-danger');
+      this.$('.btn').addClass('btn-success');
+    }
+    return this;
+  }
+});
+
 MM.EntryPickView = Backbone.View.extend({
   events: {
     'click': 'click',
@@ -66,6 +85,7 @@ MM.App = Backbone.Router.extend({
     this.entryPickCollection.fetch({reset: true});
 
     this.entryPickCollectionView = new MM.EntryPickCollectionView({collection: this.entryPickCollection});
+    this.pickCountView  = new MM.PickCountView({collection: this.entryPickCollection});
 
     $('[name=tie_break]').bind('keyup paste', function() {
       setTimeout($.proxy(function() {
