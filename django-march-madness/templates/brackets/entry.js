@@ -65,6 +65,20 @@ MM.App = Backbone.Router.extend({
     this.entryPickCollection.fetch({reset: true});
 
     this.entryPickCollectionView = new MM.EntryPickCollectionView({collection: this.entryPickCollection});
+
+    $('[name=tie_break]').bind('keyup paste', function() {
+      setTimeout($.proxy(function() {
+        var value = this.val().replace(/[^0-9]/g, '');
+        var data = JSON.stringify({
+          tie_break: value
+        });
+        $.post('ajax/', data, function(data) {
+          that.entryPickCollection.fetch({reset: true});
+        });
+        this.val(value);
+      }, $(this)), 0);
+    });
+
     $('[data-round="1"] .team.pickable').click(function() {
       var game = $(this).parent().parent().data('game');
       var pick = $(this).data('id');

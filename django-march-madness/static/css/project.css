@@ -73,13 +73,13 @@ footer {
   width: 410px;
 }
 
-#tie_break {
+input#tie_break {
   width:100px;
   text-align: right;
   margin: auto;
 }
 
-.tie-break {
+div.tie-break {
   margin-top: 20px;
 }
 

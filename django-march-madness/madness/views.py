@@ -62,7 +62,7 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
         tie_break = self.request_json.get('tie_break')
         if tie_break:
             self.object.tie_break = int(tie_break)
-            self.save()
+            self.object.save()
             return self.render_json_response({'tie_break': tie_break})
         try:
             game = self.request_json['game']
