@@ -34,7 +34,8 @@ class Bracket(models.Model):
     team = models.ForeignKey(Team)
     region = models.ForeignKey(Region)
     seed = models.IntegerField(max_length=2, blank=False)
-    is_eliminated = models.BooleanField()
+    is_eliminated = models.BooleanField(default=False)
+    is_paid = models.BooleanField(default=False)
 
     def __unicode__(self):
         return u'(%s) %s' % (self.seed, self.team.name)
