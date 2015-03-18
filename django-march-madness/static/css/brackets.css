@@ -125,6 +125,7 @@
 .bracket .team.pickable {
   cursor:pointer;
   color:#337ab7;
+  font-size: 12px;
 }
 
 .bracket .team.pickable:hover,.bracket .team.pickable.selected {
