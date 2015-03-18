@@ -45,6 +45,7 @@ class Game(models.Model):
     team_2 = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
     team_1_score = models.IntegerField(max_length=4, default=0)
     team_2_score = models.IntegerField(max_length=4, default=0)
+    winner = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
 
     def __unicode__(self):
         return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
@@ -54,6 +55,10 @@ class Entry(models.Model):
     user = models.ForeignKey(User)
     name = models.CharField(max_length=250, blank=False)
     tie_break = models.IntegerField(max_length=3, blank=False)
+    points = models.IntegerField(default=0)
+    possible = models.IntegerField(default=0)
+    position = models.IntegerField(default=0)
+    prev_position = models.IntegerField(default=0)
 
     def create_pick(self, game, pick):
         old_pick = EntryPick.objects.filter(entry=self, game=game).first()
@@ -84,16 +89,3 @@ class EntryPick(TimeStampedModel):
             'pick_team_seed': self.pick.seed,
             'pick_team_display': '({}) {}'.format(self.pick.seed, self.pick.team.name),
         }
-
-
-class Standing(models.Model):
-    # standings to be recalulated when scores are updated
-    entry = models.ForeignKey(Entry)
-    position = models.IntegerField(blank=False)
-    prev_position = models.IntegerField(blank=True)
-    points = models.IntegerField(default=0)
-
-
-class Result(models.Model):
-    game = models.ForeignKey(Game)
-    winner = models.ForeignKey(Bracket)

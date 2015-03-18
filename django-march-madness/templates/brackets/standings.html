@@ -1,0 +1,35 @@
+{% extends "__base.html" %}
+
+{% block container_class %}container-fluid{% endblock container_class %}
+
+{% block title %}Make Your Picks{% endblock %}
+
+{% block content %}
+<h2>Standings ({{ entries.count }} Entries)</h2>
+<div>
+<table class="table table-striped table-hover">
+  <thead>
+  	<tr>
+  		<th>Bracket</th>
+  		<th>Owner</th>
+  		<th>Points</th>
+  		<th>Possible</th>
+  		<th>Selections</th>
+  		<!--<th>Tie Break</th> -->
+  	</tr>
+  </thead>
+  <tbody>
+  	{% for e in entries %}
+  	<tr>
+  		<td>{{ e.name }}</td>
+  		<td>{{ e.user.get_full_name }}</td>
+  		<td>{{ e.points }}</td>
+  		<td>{{ e.possible }}</td>
+  		<td>{{ e.entrypick_set.count }}/63</td>
+  		<!--<td>{{ e.tiebreak }}</td>-->
+  	</tr>
+  	{% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock content %}

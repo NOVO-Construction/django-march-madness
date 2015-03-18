@@ -33,6 +33,7 @@
           <li><a href="{% url 'rules' %}">Rules</a></li>
 
           {% if request.user.is_authenticated %}
+            <li><a href="{% url 'madness:standings' %}">Standings</a></li>
             {% if request.user.entry_set.all %}
             <li>
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">My Brackets <span class="caret"></span></a>
