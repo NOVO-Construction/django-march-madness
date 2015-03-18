@@ -124,7 +124,7 @@
 
 .bracket .team.pickable {
   cursor:pointer;
-  color:#404040;
+  color:#337ab7;
 }
 
 .bracket .team.pickable:hover,.bracket .team.pickable.selected {
