@@ -4,11 +4,13 @@
 {% block title %}Name Your Bracket{% endblock %}
 
 {% block content %}
-<div class="container col-sm-6 col-sm-offset-3">
+<div class="container">
+<div class="row col-sm-6 col-sm-offset-3">
 	<h2>Name Your Bracket</h2>
 	<form action="." method="post">
 		{% crispy form %}
 		<button class="btn btn-default" type="submit">Make Your Picks &raquo;</button>
 	</form>
+</div>
 </div>
 {% endblock content %}

@@ -53,7 +53,7 @@
         </ul>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="{% block container_class %}container-fluid{% endblock container_class %}">
       {% if messages %}
           {% for message in messages %}
               <div class="alert {% if message.tags %}alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
