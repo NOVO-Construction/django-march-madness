@@ -14,8 +14,7 @@
   		<th>Owner</th>
   		<th>Points</th>
   		<th>Possible</th>
-  		<th>Selections</th>
-  		<!--<th>Tie Break</th> -->
+  		<th>Tie Break</th>
   	</tr>
   </thead>
   <tbody>
@@ -29,8 +28,7 @@
   		<td>{{ e.user.get_full_name }}</td>
   		<td>{{ e.points }}</td>
   		<td>{{ e.possible }}</td>
-  		<td>{{ e.entrypick_set.count }}/63</td>
-  		<!--<td>{{ e.tiebreak }}</td>-->
+  		<td>{{ e.tiebreak }}</td>
   	</tr>
   	{% endfor %}
   </tbody>
