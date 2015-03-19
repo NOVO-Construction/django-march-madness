@@ -61,7 +61,6 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
 
     def get(self, request, *args, **kwargs):
         super(EnterPicksAjaxView, self).get(request, *args, **kwargs)
-        log.debug(self.request_json)
         return self.render_json_response(self.get_picks())
 
     def post(self, request, *args, **kwargs):

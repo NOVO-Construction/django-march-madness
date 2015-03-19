@@ -25,7 +25,6 @@
   </head>
 
   <body>
-
     <div class="header navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"></a>
@@ -44,7 +43,9 @@
               </ul>
               {% endif %}
             </li>
-            <li><a href="{% url 'madness:create_entry' %}">New Bracket</a></li>
+            {% if not LOCK_BRACKETS %}
+              <li><a href="{% url 'madness:create_entry' %}">New Bracket</a></li>
+            {% endif %}
             <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
             <li><a href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
           {% else %}
