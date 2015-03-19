@@ -116,6 +116,11 @@
   overflow:hidden;
   padding:0 2px;
   min-height:20px
+  font-size: 12px;
+}
+
+.bracket a.team {
+  font-size: 12px;
 }
 
 .bracket .team:hover,.bracket .team.selected {
@@ -125,7 +130,6 @@
 .bracket .team.pickable {
   cursor:pointer;
   color:#337ab7;
-  font-size: 12px;
 }
 
 .bracket .team.pickable:hover,.bracket .team.pickable.selected {
