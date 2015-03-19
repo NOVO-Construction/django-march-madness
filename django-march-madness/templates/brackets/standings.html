@@ -15,7 +15,9 @@
   		<th>Owner</th>
   		<th>Points</th>
   		<th>Possible</th>
-  		<th>Tie Break</th>
+      {% if LOCK_BRACKETS %}
+  		  <th>Tie Break</th>
+      {% endif%}
   	</tr>
   </thead>
   <tbody>
@@ -23,10 +25,10 @@
   	<tr>
       <td>
         {% if e.is_paid %}
-        <i class="fa fa-check"></i>
+          <i class="fa fa-check"></i>
         {% endif %}
       </td>
-      {% if locked %}
+      {% if LOCK_BRACKETS %}
         <td><a href="{{ e.get_absolute_url }}">{{ e.name }}</a></td>
       {% else %}
   		  <td>{{ e.name }}</td>
@@ -34,7 +36,9 @@
   		<td>{{ e.user.get_full_name }}</td>
   		<td>{{ e.points }}</td>
   		<td>{{ e.possible }}</td>
-  		<td>{{ e.tie_break }}</td>
+      {% if LOCK_BRACKETS %}
+  		  <td>{{ e.tie_break }}</td>
+      {% endif%}
   	</tr>
   	{% endfor %}
   </tbody>

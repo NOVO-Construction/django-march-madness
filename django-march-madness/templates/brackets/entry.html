@@ -8,7 +8,7 @@
   <div>
     <div class="bracket-header">
       <div class="bracket-enter">
-        {% if locked %}
+        {% if LOCK_BRACKETS %}
           <button class="btn btn-novo" disabled type="button"><span>Brackets locked</button>
         {% else %}
           <button class="btn btn-novo" id="countdown" disabled type="button"><span>Brackets lock in</span> <span id="locked"></span></button>
@@ -801,7 +801,7 @@
 {% block extra_javascript %}
 {{ block.super }}
 
-{% if locked %}
+{% if LOCK_BRACKETS %}
   <script>
     {% include "brackets/entry_locked.js" %}
   </script>

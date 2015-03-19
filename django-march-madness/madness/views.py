@@ -42,7 +42,6 @@ class EnterPicksView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super(EnterPicksView, self).get_context_data(**kwargs)
         context['bracket'] = models.Bracket.objects.filter(year=2015)
-        context['locked'] = settings.LOCK_BRACKETS
         return context
 
     def get_queryset(self):
@@ -95,5 +94,4 @@ class StandingsView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super(StandingsView, self).get_context_data(**kwargs)
         context['entries'] = models.Entry.objects.all().order_by('-points', '-possible', 'pk')
-        context['locked'] = settings.LOCK_BRACKETS
         return context
