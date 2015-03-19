@@ -2,6 +2,7 @@ import logging
 
 from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
 from django.conf import settings
+from django.http import Http404
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView
 
@@ -14,6 +15,12 @@ class CreateEntryView(LoginRequiredMixin, CreateView):
     template_name = 'brackets/create.html'
     form_class = forms.EntryForm
     model = models.Entry
+
+    def get_context_data(self, **kwargs):
+        context = super(CreateEntryView, self).get_context_data(**kwargs)
+        if settings.LOCK_BRACKETS:
+            raise Http404("Brackets are locked.")
+        return context
 
     def get_initial(self):
         initial = super(CreateEntryView, self).get_initial()
