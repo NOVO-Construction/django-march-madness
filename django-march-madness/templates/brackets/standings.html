@@ -10,6 +10,7 @@
 <table class="table table-striped table-hover">
   <thead>
   	<tr>
+      <th>Paid</th>
   		<th>Bracket</th>
   		<th>Owner</th>
   		<th>Points</th>
@@ -20,6 +21,11 @@
   <tbody>
   	{% for e in entries %}
   	<tr>
+      <td>
+        {% if e.is_paid %}
+        <i class="fa fa-check"></i>
+        {% endif %}
+      </td>
       {% if locked %}
         <td><a href="{{ e.get_absolute_url }}">{{ e.name }}</a></td>
       {% else %}
