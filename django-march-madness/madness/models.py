@@ -114,6 +114,11 @@ class Entry(models.Model):
         obj, created = EntryPick.objects.update_or_create(entry=self, game=game, defaults={'pick': pick})
         return obj
 
+    @property
+    def champion(self):
+        c = self.entrypick_set.get(game=63)
+        return c.pick
+
     def get_absolute_url(self):
         return reverse_lazy('madness:entry_picks', args=(self.pk,))
 
