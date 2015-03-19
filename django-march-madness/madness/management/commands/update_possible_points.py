@@ -21,7 +21,7 @@ class Command(NoArgsCommand):
                     p = p + 1
 
             #round - 2
-            for rd2 in e.entrypick_set.filter(game__gte=17, game__lte=38, game__winner__isnull=True):
+            for rd2 in e.entrypick_set.filter(game__gte=33, game__lte=48, game__winner__isnull=True):
                 if rd2.pick_id not in elim:
                     p = p + 2
 

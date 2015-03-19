@@ -21,7 +21,7 @@ class Command(NoArgsCommand):
                     p = p + 1
 
             #round - 2
-            for rd2 in e.entrypick_set.filter(game__gte=17, game__lte=38):
+            for rd2 in e.entrypick_set.filter(game__gte=33, game__lte=48):
                 result = Game.objects.get(game_number=rd2.game_id)
                 if result.winner == rd2.pick:
                     p = p + 2
