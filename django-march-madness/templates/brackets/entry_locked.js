@@ -55,6 +55,7 @@ MM.EntryPickView = Backbone.View.extend({
   render: function () {
     this.$el.text(this.model.get('pick_team_display'));
     this.$el.prop('title', this.model.get('pick_team_display'));
+    this.$el.attr('data-id', this.model.get('pick_team_pk'));
     return this;
   }
 });
@@ -91,29 +92,31 @@ MM.MarkGamesView = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.render);
   },
   render: function () {
-    console.log('render MarkGamesView');
     this.finished = this.collection.finished();
     this.unfinished = this.collection.unfinished();
-    this.markFinished();
     this.markUnfinished();
+    this.markFinished();
+    this.markEliminated();
     return this;
   },
   markFinished: function () {
     this.finished.each(function(game) {
       var gameSelector = '[data-game="' + game.get('pk') + '"]';
       var winnerSelector = '[data-id="' + game.get('winner').pk + '"]';
+      var loserSelector = '[data-id="' + game.get('loser').pk + '"]';
       $game = this.$(gameSelector);
-      $winner = this.$(winnerSelector);
+      $winner = $game.find(winnerSelector);
+      $loser = $game.find(loserSelector);
       $game.addClass('finished');
       $winner.addClass('winner');
-      $game.find('.team:not(.winner)').addClass('loser');
+      $loser.addClass('loser');
 
-      // console.log(game.get('winner').pk);
-
-      // $winner = $('#w' + game.get('pk'));
-      // $winner.addClass('correct');
-      // $winner.addClass('incorrect');
-      // console.log($game, $winner);
+      $nextWinner = $('#w' + game.get('pk'));
+      if($nextWinner.data('id') ===game.get('winner').pk){
+        $nextWinner.addClass('correct');
+      } else {
+        $nextWinner.addClass('incorrect');
+      }
     }, this);
   },
   markUnfinished: function () {
@@ -121,26 +124,30 @@ MM.MarkGamesView = Backbone.View.extend({
       var gameSelector = '[data-game="' + game.get('pk') + '"]';
       $game = this.$(gameSelector);
       $game.addClass('unfinished');
-      // $winner = $('#w' + game.get('pk'));
-      // $winner.addClass('correct');
-      // $winner.addClass('incorrect');
-      // console.log($game, $winner);
     }, this);
-  }
+  },
+  markEliminated: function () {
+    this.finished.each(function(game) {
+      var selector = '.matchup.unfinished a.team[data-id="' + game.get('loser').pk + '"]';
+      $(selector).addClass('incorrect');
+    }, this);
+  },
 });
 
 MM.App = Backbone.Router.extend({
   initialize: function () {
     var that = this;
     this.entryPickCollection = new MM.EntryPickCollection();
-    this.entryPickCollection.fetch({reset: true});
+    this.gameCollection = new MM.GameCollection();
 
     this.entryPickCollectionView = new MM.EntryPickCollectionView({collection: this.entryPickCollection});
     this.pickCountView  = new MM.PickCountView({collection: this.entryPickCollection});
 
-    this.gameCollection = new MM.GameCollection();
-    this.gameCollection.fetch({reset: true});
     this.markGamesView  = new MM.MarkGamesView({collection: this.gameCollection});
+
+    this.entryPickCollection.fetch({reset: true}).then(function() {
+      that.gameCollection.fetch({reset: true});
+    });
 
     $('[name=tie_break]').prop('disabled', true);
 

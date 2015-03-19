@@ -80,6 +80,7 @@ class Game(models.Model):
             'team_1': None,
             'team_2': None,
             'winner': None,
+            'loser': None,
         }
         if self.team_1:
             dict['team_1'] = self.team_1.as_dict()
@@ -87,6 +88,11 @@ class Game(models.Model):
             dict['team_2'] = self.team_2.as_dict()
         if self.winner:
             dict['winner'] = self.winner.as_dict()
+        if self.winner:
+            if self.team_1 == self.winner and self.team_2:
+                dict['loser'] = self.team_2.as_dict()
+            if self.team_2 == self.winner and self.team_1:
+                dict['loser'] = self.team_1.as_dict()
         return dict
 
     def __unicode__(self):
