@@ -13,17 +13,11 @@ class Region(models.Model):
         return u'%s' % (self.name)
 
 
-class ScoreLink(models.Model):
-    espn = models.IntegerField(max_length=11)
-    cbs = models.IntegerField(max_length=11)
-    ncaa = models.IntegerField(max_length=11)
-
-
 class Team(models.Model):
     name = models.CharField(max_length=100, blank=False)
     mascot = models.CharField(max_length=100, blank=False)
     abbreviation = models.CharField(max_length=4, blank=False)
-    score_link = models.ForeignKey(ScoreLink, blank=True, null=True)
+    espn_id = models.CharField(max_length=100, blank=True, null=True)
 
     def __unicode__(self):
         return u'%s %s' % (self.name, self.mascot)
@@ -47,6 +41,15 @@ class Game(models.Model):
     team_1_score = models.IntegerField(max_length=4, default=0)
     team_2_score = models.IntegerField(max_length=4, default=0)
     winner = models.ForeignKey(Bracket, related_name='+', null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.team_1_score > self.team_2_score:
+            self.winner = self.team_1
+            self.team_2.is_eliminated = True
+        elif self.team_2_score > self.team_1_score:
+            self.winner = self.team_2
+            self.team_1.is_eliminated = True
+        super(Game, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
