@@ -19,7 +19,9 @@
     {% endif %}
   </div>
 </div>
-<a href="{% url 'madness:create_entry' %}" class="btn btn-novo">Create a Bracket Now</a>
+{% if not LOCK_BRACKETS %}
+  <a href="{% url 'madness:create_entry' %}" class="btn btn-novo">Create a Bracket Now</a>
+{% endif %}
 
 {% endif %}
 
