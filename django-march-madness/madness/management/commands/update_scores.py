@@ -28,12 +28,10 @@ class Command(NoArgsCommand):
 				g.save()
 				g.team_2.is_eliminated = True
 				g.team_2.save()
-				print g.team_1.name + " defeats " + g.team_2.name
 			elif win_2.search(c) is not None:
 				g.winner = g.team_2
 				g.save()
 				g.team_1.is_eliminated = True
 				g.team_1.save()
-				print g.team_2.name + " defeats " + g.team_1.name
 			else:
 				pass
