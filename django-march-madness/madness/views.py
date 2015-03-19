@@ -1,6 +1,7 @@
 import logging
 
 from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
+from django.conf import settings
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView
 
@@ -34,17 +35,24 @@ class EnterPicksView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super(EnterPicksView, self).get_context_data(**kwargs)
         context['bracket'] = models.Bracket.objects.filter(year=2015)
+        context['locked'] = settings.LOCK_BRACKETS
         return context
 
     def get_queryset(self):
-        return models.Entry.objects.filter(user=self.request.user)
+        if settings.LOCK_BRACKETS:
+            return models.Entry.objects.filter()
+        else:
+            return models.Entry.objects.filter(user=self.request.user)
 
 
 class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailView):
     model = models.Entry
 
     def get_queryset(self):
-        return models.Entry.objects.filter(user=self.request.user)
+        if settings.LOCK_BRACKETS:
+            return models.Entry.objects.filter()
+        else:
+            return models.Entry.objects.filter(user=self.request.user)
 
     def get_picks(self):
         entry = self.object
@@ -57,8 +65,9 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
         return self.render_json_response(self.get_picks())
 
     def post(self, request, *args, **kwargs):
+        if settings.LOCK_BRACKETS:
+            return self.render_bad_request_response({'message': ('brackets are locked.')})
         self.object = self.get_object()
-        log.debug(self.request_json)
         tie_break = self.request_json.get('tie_break')
         if tie_break:
             self.object.tie_break = int(tie_break)
@@ -80,4 +89,5 @@ class StandingsView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super(StandingsView, self).get_context_data(**kwargs)
         context['entries'] = models.Entry.objects.all().order_by('-points', '-possible', 'pk')
+        context['locked'] = settings.LOCK_BRACKETS
         return context
