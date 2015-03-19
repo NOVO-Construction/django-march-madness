@@ -90,3 +90,10 @@ div.tie-break {
 .social-signup {
   margin-bottom: 20px;
 }
+
+.team.winner {
+  font-weight: bold !important;
+}
+.team.loser {
+  color: #777 !important;
+}

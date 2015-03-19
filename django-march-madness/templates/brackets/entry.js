@@ -14,7 +14,7 @@ MM.PickCountView = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.render);
   },
   render: function () {
-    var length = MM.app.entryPickCollection.length;
+    var length = this.collection.length;
     this.$('.count').text(length);
     if (length < 63) {
       this.$('.btn').addClass('btn-danger');
