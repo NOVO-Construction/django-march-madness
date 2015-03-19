@@ -1,12 +1,11 @@
 import logging
+import re
+import urllib
 
+import requests
 from django.core.management.base import NoArgsCommand
 
 from madness.models import Game
-
-import re
-import requests
-import urllib
 
 log = logging.getLogger(__name__)
 

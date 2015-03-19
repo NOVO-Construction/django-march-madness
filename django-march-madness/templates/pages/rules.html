@@ -17,7 +17,7 @@
 	<li>For any questions about the pool or issues with the site, please contact <a href="mailto:cstoner@novoconstruction.com">Colin Stoner</a> (yes, that's a real name).
 </ol>
 
-{% if not request.user.is_authenticated %}
+{% if not request.user.is_authenticated and not LOCK_BRACKETS%}
 <div class="text-center">
 	<a href="{% url 'account_signup' %}" class="btn btn-novo">Sign Up Now</a>
 </div>
