@@ -35,7 +35,7 @@ class EnterPicksView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super(EnterPicksView, self).get_context_data(**kwargs)
         context['bracket'] = models.Bracket.objects.filter(year=2015)
-        context['locked'] = settings.LOCK_BRACKEST
+        context['locked'] = settings.LOCK_BRACKETS
         return context
 
     def get_queryset(self):
@@ -59,8 +59,9 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
         return self.render_json_response(self.get_picks())
 
     def post(self, request, *args, **kwargs):
+        if settings.LOCK_BRACKETS:
+            return self.render_bad_request_response({'message': ('brackets are locked.')})
         self.object = self.get_object()
-        log.debug(self.request_json)
         tie_break = self.request_json.get('tie_break')
         if tie_break:
             self.object.tie_break = int(tie_break)
