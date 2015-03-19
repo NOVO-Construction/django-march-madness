@@ -13,7 +13,19 @@ MM.Game = Backbone.Model.extend({
 });
 MM.GameCollection = Backbone.Collection.extend({
   model: MM.Game,
-  url: '/madness/games/ajax/'
+  url: '/madness/games/ajax/',
+  finished: function() {
+    var filtered = this.filter(function(item) {
+      return item.get('winner');
+    });
+    return new MM.GameCollection(filtered);
+  },
+  unfinished: function() {
+    var filtered = this.filter(function(item) {
+      return item.get('winner') === null;
+    });
+    return new MM.GameCollection(filtered);
+  }
 });
 
 MM.PickCountView = Backbone.View.extend({
@@ -59,8 +71,8 @@ MM.EntryPickCollectionView = Backbone.View.extend({
       view.$el.empty();
     });
     this.addAll();
+    MM.app.markGamesView.render();
     return this;
-
   },
   addOne: function (model) {
     var el = '#w' + model.get('game_pk');
@@ -71,6 +83,16 @@ MM.EntryPickCollectionView = Backbone.View.extend({
   addAll: function () {
     this.collection.forEach(this.addOne, this);
     $('.bracket .team').removeClass('pickable');
+  }
+});
+
+MM.MarkGamesView = Backbone.View.extend({
+  el: $('.bracket'),
+  initialize: function () {
+  },
+  render: function () {
+    console.log('render MarkGamesView');
+    return this;
   }
 });
 
@@ -85,6 +107,7 @@ MM.App = Backbone.Router.extend({
 
     this.entryPickCollectionView = new MM.EntryPickCollectionView({collection: this.entryPickCollection});
     this.pickCountView  = new MM.PickCountView({collection: this.entryPickCollection});
+    this.markGamesView  = new MM.MarkGamesView({collection: this.entryPickCollection});
 
     $('[name=tie_break]').prop('disabled', true);
 
