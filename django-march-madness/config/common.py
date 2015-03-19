@@ -161,7 +161,7 @@ class Common(Configuration):
         'django.core.context_processors.tz',
         'django.contrib.messages.context_processors.messages',
         'django.core.context_processors.request',
-        # Your stuff: custom template context processers go here
+        'madness.context_processors.lock_brackets',
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
@@ -289,4 +289,4 @@ class Common(Configuration):
         cls.DATABASES['default']['ATOMIC_REQUESTS'] = True
 
     # Your common stuff: Below this line define 3rd party library settings
-    LOCK_BRACKETS = False
+    LOCK_BRACKETS = True
