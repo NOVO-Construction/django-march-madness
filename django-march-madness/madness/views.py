@@ -39,14 +39,20 @@ class EnterPicksView(LoginRequiredMixin, DetailView):
         return context
 
     def get_queryset(self):
-        return models.Entry.objects.filter(user=self.request.user)
+        if settings.LOCK_BRACKETS:
+            return models.Entry.objects.filter()
+        else:
+            return models.Entry.objects.filter(user=self.request.user)
 
 
 class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailView):
     model = models.Entry
 
     def get_queryset(self):
-        return models.Entry.objects.filter(user=self.request.user)
+        if settings.LOCK_BRACKETS:
+            return models.Entry.objects.filter()
+        else:
+            return models.Entry.objects.filter(user=self.request.user)
 
     def get_picks(self):
         entry = self.object
@@ -83,4 +89,5 @@ class StandingsView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super(StandingsView, self).get_context_data(**kwargs)
         context['entries'] = models.Entry.objects.all().order_by('-points', '-possible', 'pk')
+        context['locked'] = settings.LOCK_BRACKETS
         return context
