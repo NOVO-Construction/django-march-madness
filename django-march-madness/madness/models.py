@@ -67,10 +67,8 @@ class Game(models.Model):
     def save(self, *args, **kwargs):
         if self.team_1_score > self.team_2_score:
             self.winner = self.team_1
-            self.team_2.is_eliminated = True
         elif self.team_2_score > self.team_1_score:
             self.winner = self.team_2
-            self.team_1.is_eliminated = True
         super(Game, self).save(*args, **kwargs)
 
     def as_dict(self):
