@@ -131,14 +131,14 @@
   color:#FFB51F;
 }
 
-.bracket .team.correct,.bracket .team.incorrect {
-  background:#38b44a;
-  color:#000;
+.bracket .team.correct {
+  color:#38b44a;
   text-shadow:0 -1px 0 rgba(255,255,255,0.25)
 }
 
 .bracket .team.incorrect {
-  background:#df382c
+  color:#df382c;
+  text-shadow:0 -1px 0 rgba(255,255,255,0.25);
 }
 
 .bracket .team.incorrect,.bracket .team.eliminated {
