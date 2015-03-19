@@ -1,6 +1,7 @@
 import logging
 
 from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
+from django.conf import settings
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView
 
@@ -34,6 +35,7 @@ class EnterPicksView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super(EnterPicksView, self).get_context_data(**kwargs)
         context['bracket'] = models.Bracket.objects.filter(year=2015)
+        context['locked'] = settings.LOCK_BRACKEST
         return context
 
     def get_queryset(self):
