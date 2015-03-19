@@ -3,7 +3,7 @@ import logging
 from braces.views import JsonRequestResponseMixin, LoginRequiredMixin
 from django.conf import settings
 from django.http import Http404
-from django.views.generic import DetailView, TemplateView
+from django.views.generic import DetailView, TemplateView, View
 from django.views.generic.edit import CreateView
 
 from . import forms, models
@@ -85,6 +85,15 @@ class EnterPicksAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, DetailVie
             return self.render_bad_request_response({'message': ('must supply game and pick')})
         pick = self.object.create_pick(models.Game.objects.get(pk=game), models.Bracket.objects.get(pk=pick))
         return self.render_json_response(pick.as_dict())
+
+
+class GamesAjaxView(LoginRequiredMixin, JsonRequestResponseMixin, View):
+    def get_games(self):
+        games = models.Game.objects.select_related('region', 'team_1__team', 'team_2__team', 'winner__team').all()
+        return [game.as_dict() for game in games]
+
+    def get(self, request, *args, **kwargs):
+        return self.render_json_response(self.get_games())
 
 
 class StandingsView(LoginRequiredMixin, TemplateView):

@@ -8,6 +8,14 @@ MM.EntryPickCollection = Backbone.Collection.extend({
   url: 'ajax/'
 });
 
+MM.Game = Backbone.Model.extend({
+  urlRoot: '/madness/games/ajax/'
+});
+MM.GameCollection = Backbone.Collection.extend({
+  model: MM.Game,
+  url: '/madness/games/ajax/'
+});
+
 MM.PickCountView = Backbone.View.extend({
   el: '#pick-count',
   initialize: function () {
@@ -71,6 +79,9 @@ MM.App = Backbone.Router.extend({
     var that = this;
     this.entryPickCollection = new MM.EntryPickCollection();
     this.entryPickCollection.fetch({reset: true});
+
+    this.gameCollection = new MM.GameCollection();
+    this.gameCollection.fetch({reset: true});
 
     this.entryPickCollectionView = new MM.EntryPickCollectionView({collection: this.entryPickCollection});
     this.pickCountView  = new MM.PickCountView({collection: this.entryPickCollection});

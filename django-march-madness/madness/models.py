@@ -19,6 +19,15 @@ class Team(models.Model):
     abbreviation = models.CharField(max_length=4, blank=False)
     espn_id = models.CharField(max_length=100, blank=True, null=True)
 
+    def as_dict(self):
+        return {
+            'pk': self.pk,
+            'name': self.name,
+            'mascot': self.mascot,
+            'abbreviation': self.abbreviation,
+            'espn_id': self.espn_id,
+        }
+
     def __unicode__(self):
         return u'%s %s' % (self.name, self.mascot)
 
@@ -29,6 +38,19 @@ class Bracket(models.Model):
     region = models.ForeignKey(Region)
     seed = models.IntegerField(max_length=2, blank=False)
     is_eliminated = models.BooleanField(default=False)
+
+    def as_dict(self):
+        dict = {
+            'pk': self.pk,
+            'year': self.year,
+            'team': None,
+            'region': self.region.name,
+            'seed': self.seed,
+            'is_eliminated': self.is_eliminated,
+        }
+        if self.team:
+            dict['team'] = self.team.as_dict()
+        return dict
 
     def __unicode__(self):
         return u'(%s) %s' % (self.seed, self.team.name)
@@ -50,6 +72,22 @@ class Game(models.Model):
             self.winner = self.team_2
             self.team_1.is_eliminated = True
         super(Game, self).save(*args, **kwargs)
+
+    def as_dict(self):
+        dict = {
+            'pk': self.pk,
+            'game_number': self.game_number,
+            'team_1': None,
+            'team_2': None,
+            'winner': None,
+        }
+        if self.team_1:
+            dict['team_1'] = self.team_1.as_dict()
+        if self.team_2:
+            dict['team_2'] = self.team_2.as_dict()
+        if self.winner:
+            dict['winner'] = self.winner.as_dict()
+        return dict
 
     def __unicode__(self):
         return u'%s - %s vs %s' % (self.game_number, self.team_1, self.team_2)
