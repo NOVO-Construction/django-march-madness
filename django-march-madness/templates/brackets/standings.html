@@ -6,6 +6,7 @@
 
 {% block content %}
 <h2>Standings ({{ entries.count }} Entries)</h2>
+<p>During live games, Standings are calculated every five minutes.</p>
 <div>
 <table class="table table-striped table-hover">
   <thead>
@@ -15,8 +16,8 @@
   		<th>Owner</th>
   		<th>Points</th>
   		<th>Possible</th>
-      <th>Champion</th>
       {% if LOCK_BRACKETS %}
+        <th>Champion</th>
   		  <th>Tie Break</th>
       {% endif%}
   	</tr>
@@ -37,8 +38,8 @@
   		<td>{{ e.user.get_full_name }}</td>
   		<td>{{ e.points }}</td>
   		<td>{{ e.possible }}</td>
-      <td>{{ e.champion }}</td>
       {% if LOCK_BRACKETS %}
+        <td>{{ e.champion }}</td>
   		  <td>{{ e.tie_break }}</td>
       {% endif%}
   	</tr>
