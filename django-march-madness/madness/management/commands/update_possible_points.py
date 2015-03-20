@@ -45,5 +45,5 @@ class Command(NoArgsCommand):
                 if rd6.pick_id not in elim:
                     p = p + 32
 
-            e.possible = p
+            e.possible = p + e.points
             e.save()
