@@ -97,3 +97,20 @@ div.tie-break {
 .team.loser {
   color: #777 !important;
 }
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after {
+  position: auto;
+  top: auto;
+  right: auto;
+  display: inline;
+}
+table.dataTable thead .sorting:after {
+	opacity: 0.2;
+	content: " \00a0\e150"; /* sort */
+}
+table.dataTable thead .sorting_asc:after {
+	content: "\00a0\e155"; /* sort-by-attributes */
+}
+table.dataTable thead .sorting_desc:after {
+	content: "\00a0\e156"; /* sort-by-attributes-alt */
+}
