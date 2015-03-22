@@ -109,7 +109,7 @@ MM.MarkGamesView = Backbone.View.extend({
       $loser = $game.find(loserSelector);
       $game.addClass('finished');
       $winner.addClass('winner');
-      $loser.addClass('loser');
+      // $loser.addClass('loser');
 
       $nextWinner = $('#w' + game.get('pk'));
       if($nextWinner.data('id') ===game.get('winner').pk){
