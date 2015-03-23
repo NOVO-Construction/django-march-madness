@@ -23,7 +23,7 @@ class BracketAdmin(admin.ModelAdmin):
 
 @admin.register(models.Game)
 class GameAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('game_number', 'team_1', 'team_2', 'team_1_score', 'team_2_score', 'winner')
 
 
 @admin.register(models.Entry)
