@@ -18,7 +18,8 @@ class TeamAdmin(admin.ModelAdmin):
 
 @admin.register(models.Bracket)
 class BracketAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('team', 'is_eliminated')
+    list_filter = ('is_eliminated',)
 
 
 @admin.register(models.Game)
