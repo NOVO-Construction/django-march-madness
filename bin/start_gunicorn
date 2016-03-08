@@ -26,5 +26,5 @@ exec /home/ec2-user/.virtualenvs/madness/bin/gunicorn ${DJANGO_WSGI_MODULE} \
   --workers=$NUM_WORKERS \
   --user=$USER --group=$GROUP \
   --log-level=debug \
-  --limit-request-line=16376
+  --limit-request-line=16376 \
   --bind=localhost:$PORT
