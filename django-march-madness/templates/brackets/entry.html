@@ -808,7 +808,7 @@
   </script>
 {% else %}
   <script>
-    var tourney = new Date(Date.UTC(2016, 02, 17, 16, 25));
+    var tourney = new Date(Date.UTC(2016, 2, 17, 16, 25));
     function update() {
       time = countdown(null, tourney, countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS).toString();
       $('#locked').html(time);
