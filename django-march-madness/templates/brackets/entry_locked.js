@@ -126,7 +126,7 @@ MM.MarkGamesView = Backbone.View.extend({
   },
   markEliminated: function () {
     this.finished.each(function(game) {
-      var selector = '.matchup.unfinished a.team[data-id="' + game.get('loser').pk + '"]';
+      var selector = '.matchup.unfinished a.team[data-id="' + game.get('loser').team.pk + '"]';
       $(selector).addClass('incorrect');
     }, this);
   }
