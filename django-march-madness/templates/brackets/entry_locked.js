@@ -109,10 +109,8 @@ MM.MarkGamesView = Backbone.View.extend({
       $loser = $game.find(loserSelector);
       $game.addClass('finished');
       $winner.addClass('winner');
-      // $loser.addClass('loser');
-
       $nextWinner = $('#w' + game.get('pk'));
-      if($nextWinner.data('id') ===game.get('winner').pk){
+      if($nextWinner.data('id') === game.get('winner').team.pk){
         $nextWinner.addClass('correct');
       } else {
         $nextWinner.addClass('incorrect');
@@ -131,7 +129,7 @@ MM.MarkGamesView = Backbone.View.extend({
       var selector = '.matchup.unfinished a.team[data-id="' + game.get('loser').pk + '"]';
       $(selector).addClass('incorrect');
     }, this);
-  },
+  }
 });
 
 MM.App = Backbone.Router.extend({
