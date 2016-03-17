@@ -40,6 +40,7 @@ class Common(Configuration):
         'avatar',
         'crispy_forms',
         'djrill',
+        'impersonate',
     )
 
     # Apps specific for this project go here.
@@ -62,6 +63,7 @@ class Common(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'impersonate.middleware.ImpersonateMiddleware',
     )
     # END MIDDLEWARE CONFIGURATION
 
