@@ -141,3 +141,6 @@ class EntryPick(TimeStampedModel):
             'pick_team_seed': self.pick.seed,
             'pick_team_display': '({}) {}'.format(self.pick.seed, self.pick.team.name),
         }
+
+    class Meta:
+        unique_together = (('entry', 'game'),)
