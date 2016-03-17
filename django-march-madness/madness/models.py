@@ -33,7 +33,7 @@ class Team(models.Model):
 
 
 class Bracket(models.Model):
-    year = models.IntegerField(max_length=4, blank=False, default=2015)
+    year = models.IntegerField(max_length=4, blank=False, default=2016)
     team = models.ForeignKey(Team)
     region = models.ForeignKey(Region)
     seed = models.IntegerField(max_length=2, blank=False)
